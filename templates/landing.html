@@ -15,6 +15,24 @@
         .hidden-section { display: none !important; }
         .fade-in { animation: fadeIn 0.5s ease-in-out; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        /* Mega Menü Ayarları */
+        .mega-menu {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            z-index: 50;
+        }
+        .group:hover .mega-menu {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="bg-[#0b0f1a] text-white font-sans scroll-smooth">
@@ -22,19 +40,56 @@
     <div id="landing-page" class="fade-in">
         
         <nav class="sticky top-0 z-[100] glass border-b border-slate-800 px-6 py-4">
-            <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="max-w-7xl mx-auto flex justify-between items-center relative">
                 <div class="flex items-center gap-8">
                     <div class="text-2xl font-black text-sky-400 tracking-tighter uppercase cursor-pointer" onclick="showLanding()">AI Turbo Assistance</div>
                     
-                    <div class="hidden md:flex gap-6 text-sm font-medium text-slate-400">
-                        <a href="#features" class="hover:text-white transition tr-text">Özellikler</a>
-                        <a href="#features" class="hover:text-white transition en-text lang-hidden">Features</a>
+                    <div class="hidden md:flex gap-6 text-sm font-medium text-slate-400 items-center">
                         
-                        <a href="#solutions" class="hover:text-white transition tr-text">Çözümler</a>
-                        <a href="#solutions" class="hover:text-white transition en-text lang-hidden">Solutions</a>
+                        <div class="group py-4">
+                            <button class="hover:text-white transition flex items-center gap-1">
+                                <span class="tr-text">Özellikler</span>
+                                <span class="en-text lang-hidden">Features</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                            </button>
+                            
+                            <div class="mega-menu pt-4">
+                                <div class="bg-[#0f172a] border border-slate-700 rounded-2xl shadow-2xl p-8 grid grid-cols-3 gap-8 w-[600px]">
+                                    <div>
+                                        <h4 class="text-sky-400 font-bold mb-4 text-xs uppercase tracking-widest">Core AI</h4>
+                                        <ul class="space-y-3 text-slate-300">
+                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer"><span class="text-sky-500">⚡</span> Live Translation</li>
+                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer"><span class="text-sky-500">🎙️</span> Voice Synthesis</li>
+                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer"><span class="text-sky-500">🧠</span> Context Aware</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-emerald-400 font-bold mb-4 text-xs uppercase tracking-widest">Productivity</h4>
+                                        <ul class="space-y-3 text-slate-300">
+                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer"><span class="text-emerald-500">📄</span> PDF Export</li>
+                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer"><span class="text-emerald-500">📝</span> Auto Summarize</li>
+                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer"><span class="text-emerald-500">💾</span> Cloud Save</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-amber-400 font-bold mb-4 text-xs uppercase tracking-widest">Platform</h4>
+                                        <ul class="space-y-3 text-slate-300">
+                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer"><span class="text-amber-500">📱</span> iOS & Android</li>
+                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer"><span class="text-amber-500">💻</span> Web App</li>
+                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer"><span class="text-amber-500">🔒</span> Secure API</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#solutions" class="hover:text-white transition tr-text">Kullanım Alanları</a>
+                        <a href="#solutions" class="hover:text-white transition en-text lang-hidden">Use Cases</a>
 
-                        <a href="#guide" class="hover:text-white transition tr-text">Kullanım Rehberi</a>
-                        <a href="#guide" class="hover:text-white transition en-text lang-hidden">User Guide</a>
+                        <a href="#how-it-works" class="hover:text-white transition tr-text">Nasıl Çalışır?</a>
+                        <a href="#how-it-works" class="hover:text-white transition en-text lang-hidden">How it Works</a>
+
+                        <a href="#faq" class="hover:text-white transition tr-text">S.S.S.</a>
+                        <a href="#faq" class="hover:text-white transition en-text lang-hidden">FAQ</a>
                         
                         <a href="#contact" class="hover:text-white transition tr-text">İletişim</a>
                         <a href="#contact" class="hover:text-white transition en-text lang-hidden">Contact</a>
@@ -61,13 +116,13 @@
                 <button onclick="showApp()" class="bg-sky-500 px-10 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition text-white shadow-lg shadow-sky-500/30">
                     Start Now
                 </button>
-                <button onclick="showApp()" class="border border-slate-700 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-slate-800 transition">
+                <a href="#how-it-works" class="border border-slate-700 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-slate-800 transition">
                     User Guide
-                </button>
+                </a>
             </div>
         </section>
 
-        <section id="features" class="py-24 bg-[#0b0f1a]">
+        <section class="py-24 bg-[#0b0f1a]">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="flex justify-center gap-8 mb-16 text-sm font-bold tracking-widest text-slate-500">
                     <div class="flex flex-col items-center"><span class="text-sky-400 text-2xl mb-1">01</span> DREAM</div>
@@ -109,30 +164,95 @@
             </div>
         </section>
 
-        <section id="solutions" class="py-24 max-w-7xl mx-auto px-6 border-y border-slate-800">
-             <div class="grid md:grid-cols-3 gap-16">
-                <div class="col-span-1 border-r border-slate-800 pr-10">
-                    <h2 class="text-4xl font-black mb-6 tr-text">Neden AI Turbo?</h2>
-                    <h2 class="text-4xl font-black mb-6 en-text lang-hidden">Why AI Turbo?</h2>
-                    <p class="text-slate-400 mb-8 tr-text">Eğitimin her alanında, dil sınırlarını ortadan kaldıran çözümler sunuyoruz.</p>
-                    <p class="text-slate-400 mb-8 en-text lang-hidden">We offer solutions that break language boundaries in every field of education.</p>
-                </div>
-                <div class="col-span-2 space-y-12">
-                    <div class="bg-slate-900/50 p-8 rounded-3xl border border-slate-800">
-                        <h3 class="text-2xl font-bold mb-4 tr-text">Üniversite Eğitiminde Devrim</h3>
-                        <h3 class="text-2xl font-bold mb-4 en-text lang-hidden">Revolution in University Education</h3>
-                        <p class="text-slate-400 leading-relaxed tr-text">Yurt dışında okuyan veya yabancı dilde eğitim alan öğrenciler için ders takibi artık kabus değil. AI Turbo Assistance, hocanızın anlatımını anında kendi dilinize çevirerek akademik başarınızı destekler.</p>
-                        <p class="text-slate-400 leading-relaxed en-text lang-hidden">Following lectures is no longer a nightmare for students studying abroad. AI Turbo Assistance instantly translates your professor's speech into your language, supporting your academic success.</p>
+        <section id="how-it-works" class="py-24 bg-slate-900/50 border-y border-slate-800">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-4xl font-black mb-16 text-center tr-text">Sistem Nasıl Çalışır?</h2>
+                <h2 class="text-4xl font-black mb-16 text-center en-text lang-hidden">How It Works?</h2>
+                
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="relative">
+                        <div class="text-8xl font-black text-slate-800 absolute -top-10 -left-4 -z-10">01</div>
+                        <h3 class="text-xl font-bold text-sky-400 mb-2 tr-text">Tuşa Bas</h3>
+                        <h3 class="text-xl font-bold text-sky-400 mb-2 en-text lang-hidden">Press Start</h3>
+                        <p class="text-slate-400 text-sm tr-text">"Sistemi Başlat" butonuna tıklayarak mikrofonu aktif hale getir.</p>
+                        <p class="text-slate-400 text-sm en-text lang-hidden">Click "Start System" to activate the microphone.</p>
+                    </div>
+                    <div class="relative">
+                        <div class="text-8xl font-black text-slate-800 absolute -top-10 -left-4 -z-10">02</div>
+                        <h3 class="text-xl font-bold text-emerald-400 mb-2 tr-text">Hoca Konuşsun</h3>
+                        <h3 class="text-xl font-bold text-emerald-400 mb-2 en-text lang-hidden">Listen</h3>
+                        <p class="text-slate-400 text-sm tr-text">Hocanın veya konuşmacının sesini yapay zeka anında algılar.</p>
+                        <p class="text-slate-400 text-sm en-text lang-hidden">AI instantly detects the speaker's voice.</p>
+                    </div>
+                    <div class="relative">
+                        <div class="text-8xl font-black text-slate-800 absolute -top-10 -left-4 -z-10">03</div>
+                        <h3 class="text-xl font-bold text-amber-400 mb-2 tr-text">Anında Çeviri</h3>
+                        <h3 class="text-xl font-bold text-amber-400 mb-2 en-text lang-hidden">Translate</h3>
+                        <p class="text-slate-400 text-sm tr-text">Söylenenler anında kendi diline çevrilir ve kulağına sesli olarak gelir.</p>
+                        <p class="text-slate-400 text-sm en-text lang-hidden">Speech is translated instantly and played back in your ear.</p>
+                    </div>
+                    <div class="relative">
+                        <div class="text-8xl font-black text-slate-800 absolute -top-10 -left-4 -z-10">04</div>
+                        <h3 class="text-xl font-bold text-purple-400 mb-2 tr-text">Kaydet & İndir</h3>
+                        <h3 class="text-xl font-bold text-purple-400 mb-2 en-text lang-hidden">Download</h3>
+                        <p class="text-slate-400 text-sm tr-text">Ders bitiminde tüm çeviriyi metin dosyası (TXT) olarak indir.</p>
+                        <p class="text-slate-400 text-sm en-text lang-hidden">Download the full translation as a text file (TXT) at the end.</p>
                     </div>
                 </div>
-             </div>
+            </div>
+        </section>
+
+        <section id="solutions" class="py-24 max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-black mb-12 text-center tr-text">Hangi Alanlarda Kullanılır?</h2>
+            <h2 class="text-4xl font-black mb-12 text-center en-text lang-hidden">Use Cases</h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 flex items-start gap-4">
+                    <div class="bg-sky-500/20 p-3 rounded-xl text-sky-400 text-2xl">🎓</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 tr-text">Erasmus & Yurt Dışı Eğitim</h3>
+                        <h3 class="text-xl font-bold mb-2 en-text lang-hidden">Erasmus & Study Abroad</h3>
+                        <p class="text-slate-400 text-sm tr-text">Yabancı dildeki dersleri kendi ana dilinde dinleyerek akademik başarını artır.</p>
+                        <p class="text-slate-400 text-sm en-text lang-hidden">Increase academic success by listening to foreign lectures in your native language.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 flex items-start gap-4">
+                    <div class="bg-emerald-500/20 p-3 rounded-xl text-emerald-400 text-2xl">💼</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 tr-text">Uluslararası Toplantılar</h3>
+                        <h3 class="text-xl font-bold mb-2 en-text lang-hidden">International Meetings</h3>
+                        <p class="text-slate-400 text-sm tr-text">Yabancı iş ortaklarıyla yapılan toplantılarda dil bariyerine takılma.</p>
+                        <p class="text-slate-400 text-sm en-text lang-hidden">Don't get stuck on language barriers in meetings with foreign partners.</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 flex items-start gap-4">
+                    <div class="bg-amber-500/20 p-3 rounded-xl text-amber-400 text-2xl">🌐</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 tr-text">Online Seminerler</h3>
+                        <h3 class="text-xl font-bold mb-2 en-text lang-hidden">Online Seminars</h3>
+                        <p class="text-slate-400 text-sm tr-text">Webinarları ve online kursları kaçırmadan, tam anlayarak takip et.</p>
+                        <p class="text-slate-400 text-sm en-text lang-hidden">Follow webinars and online courses with full understanding.</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 flex items-start gap-4">
+                    <div class="bg-purple-500/20 p-3 rounded-xl text-purple-400 text-2xl">🗣️</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 tr-text">Dil Öğrenimi</h3>
+                        <h3 class="text-xl font-bold mb-2 en-text lang-hidden">Language Learning</h3>
+                        <p class="text-slate-400 text-sm tr-text">Orijinal konuşma ile çeviriyi kıyaslayarak dil pratiği yap.</p>
+                        <p class="text-slate-400 text-sm en-text lang-hidden">Practice language by comparing original speech with translation.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="py-24 bg-slate-900/30">
             <div class="max-w-4xl mx-auto px-6 text-center">
                 <h2 class="text-3xl font-black mb-8 tr-text">Biz Kimiz?</h2>
                 <h2 class="text-3xl font-black mb-8 en-text lang-hidden">Who Are We?</h2>
-                
                 <p class="text-xl text-slate-300 leading-relaxed mb-8 tr-text">
                     Biz, dil engelinin akademik başarıya engel olmamasını dert edinen bir grup üniversite öğrencisiyiz. 
                     Kendi yaşadığımız zorluklardan yola çıkarak, eğitimde fırsat eşitliği sağlamak amacıyla 
@@ -142,37 +262,64 @@
                     We are a group of university students concerned that language barriers should not hinder academic success. 
                     Based on the difficulties we experienced, we developed this AI assistant to ensure equal opportunity in education.
                 </p>
-                
-                <div class="flex justify-center gap-4">
-                    <span class="px-4 py-2 bg-slate-800 rounded-full text-xs font-bold text-slate-400 border border-slate-700">🚀 Öğrenci Projesi</span>
-                    <span class="px-4 py-2 bg-slate-800 rounded-full text-xs font-bold text-slate-400 border border-slate-700">🎓 %100 Yerli</span>
-                    <span class="px-4 py-2 bg-slate-800 rounded-full text-xs font-bold text-slate-400 border border-slate-700">🌍 Global Vizyon</span>
-                </div>
             </div>
         </section>
 
-        <section id="guide" class="py-24 max-w-4xl mx-auto px-6">
+        <section id="faq" class="py-24 max-w-4xl mx-auto px-6">
             <h2 class="text-3xl font-bold mb-10 text-center tr-text">Sıkça Sorulan Sorular</h2>
             <h2 class="text-3xl font-bold mb-10 text-center en-text lang-hidden">Frequently Asked Questions</h2>
             <div class="space-y-4">
+                
                 <details class="group bg-slate-900 p-6 rounded-2xl border border-slate-800">
                     <summary class="font-bold cursor-pointer flex justify-between items-center">
                         <span class="tr-text">Sistem her cihazda çalışır mı?</span>
                         <span class="en-text lang-hidden">Does it work on every device?</span>
                         <span class="group-open:rotate-180 transition">▼</span>
                     </summary>
-                    <p class="mt-4 text-slate-400 text-sm tr-text">Evet, tüm tarayıcılardan erişilebilir.</p>
-                    <p class="mt-4 text-slate-400 text-sm en-text lang-hidden">Yes, accessible from all browsers.</p>
+                    <p class="mt-4 text-slate-400 text-sm tr-text">Evet, tarayıcı tabanlı olduğu için Telefon, Tablet ve Bilgisayarlarda sorunsuz çalışır.</p>
+                    <p class="mt-4 text-slate-400 text-sm en-text lang-hidden">Yes, it works seamlessly on Phones, Tablets, and PCs as it is browser-based.</p>
                 </details>
+
                 <details class="group bg-slate-900 p-6 rounded-2xl border border-slate-800">
                     <summary class="font-bold cursor-pointer flex justify-between items-center">
-                        <span class="tr-text">Ücretli mi?</span>
-                        <span class="en-text lang-hidden">Is it paid?</span>
+                        <span class="tr-text">Uygulama ücretli mi?</span>
+                        <span class="en-text lang-hidden">Is the app paid?</span>
                         <span class="group-open:rotate-180 transition">▼</span>
                     </summary>
-                    <p class="mt-4 text-slate-400 text-sm tr-text">Şu an için tüm öğrencilerimize ücretsiz hizmet vermekteyiz.</p>
-                    <p class="mt-4 text-slate-400 text-sm en-text lang-hidden">We currently provide free service to all our students.</p>
+                    <p class="mt-4 text-slate-400 text-sm tr-text">Şu an için öğrencilerimize tamamen ücretsiz hizmet vermekteyiz.</p>
+                    <p class="mt-4 text-slate-400 text-sm en-text lang-hidden">We currently provide completely free service to our students.</p>
                 </details>
+
+                <details class="group bg-slate-900 p-6 rounded-2xl border border-slate-800">
+                    <summary class="font-bold cursor-pointer flex justify-between items-center">
+                        <span class="tr-text">İnternet bağlantısı gerekli mi?</span>
+                        <span class="en-text lang-hidden">Is internet required?</span>
+                        <span class="group-open:rotate-180 transition">▼</span>
+                    </summary>
+                    <p class="mt-4 text-slate-400 text-sm tr-text">Evet, yapay zeka motorunun çalışması için aktif bir internet bağlantısı gereklidir.</p>
+                    <p class="mt-4 text-slate-400 text-sm en-text lang-hidden">Yes, an active internet connection is required for the AI engine to work.</p>
+                </details>
+
+                <details class="group bg-slate-900 p-6 rounded-2xl border border-slate-800">
+                    <summary class="font-bold cursor-pointer flex justify-between items-center">
+                        <span class="tr-text">Hangi dilleri destekliyor?</span>
+                        <span class="en-text lang-hidden">Which languages are supported?</span>
+                        <span class="group-open:rotate-180 transition">▼</span>
+                    </summary>
+                    <p class="mt-4 text-slate-400 text-sm tr-text">Şu an İngilizce, Almanca, Fransızca ve İspanyolca dillerinden Türkçeye anlık çeviri yapabilmektedir.</p>
+                    <p class="mt-4 text-slate-400 text-sm en-text lang-hidden">It currently supports instant translation from English, German, French, and Spanish to Turkish.</p>
+                </details>
+
+                <details class="group bg-slate-900 p-6 rounded-2xl border border-slate-800">
+                    <summary class="font-bold cursor-pointer flex justify-between items-center">
+                        <span class="tr-text">Ders kayıtları saklanıyor mu?</span>
+                        <span class="en-text lang-hidden">Are recordings saved?</span>
+                        <span class="group-open:rotate-180 transition">▼</span>
+                    </summary>
+                    <p class="mt-4 text-slate-400 text-sm tr-text">Hayır, gizliliğiniz için kayıtlar sunucularımızda tutulmaz. Sadece siz "İndir" derseniz cihazınıza kaydedilir.</p>
+                    <p class="mt-4 text-slate-400 text-sm en-text lang-hidden">No, recordings are not stored on our servers for your privacy. They are saved to your device only if you click "Download".</p>
+                </details>
+
             </div>
         </section>
 
@@ -228,37 +375,11 @@
         </div>
 
         <div class="max-w-md text-slate-300 space-y-6">
-            <h3 class="text-2xl font-bold text-white border-b border-slate-700 pb-2">Nasıl Çalışır?</h3>
-            
-            <div class="space-y-4">
-                <details class="group bg-slate-900/50 p-4 rounded-xl border border-slate-800 cursor-pointer" open>
-                    <summary class="font-bold text-sky-400 flex justify-between items-center list-none">
-                        1. Sistemi Başlatın
-                        <span class="text-xs text-slate-500">▼</span>
-                    </summary>
-                    <p class="mt-2 text-sm text-slate-400">"Sistemi Başlat" butonuna tıkladığınızda mikrofonunuz aktif olur ve ortamdaki konuşmaları dinlemeye başlar.</p>
-                </details>
-
-                <details class="group bg-slate-900/50 p-4 rounded-xl border border-slate-800 cursor-pointer">
-                    <summary class="font-bold text-emerald-400 flex justify-between items-center list-none">
-                        2. Anlık Çeviri
-                        <span class="text-xs text-slate-500">▼</span>
-                    </summary>
-                    <p class="mt-2 text-sm text-slate-400">Yapay zeka, duyduğu Türkçe cümleleri saniyeler içinde analiz eder ve alt kutucukta İngilizce karşılığını gösterir.</p>
-                </details>
-
-                <details class="group bg-slate-900/50 p-4 rounded-xl border border-slate-800 cursor-pointer">
-                    <summary class="font-bold text-amber-400 flex justify-between items-center list-none">
-                        3. Notları Kaydedin
-                        <span class="text-xs text-slate-500">▼</span>
-                    </summary>
-                    <p class="mt-2 text-sm text-slate-400">Ders veya toplantı bittiğinde "Ders Notlarını İndir" butonuna basarak tüm konuşmayı metin belgesi olarak bilgisayarınıza indirebilirsiniz.</p>
-                </details>
-                
-                <div class="bg-blue-500/10 p-4 rounded-xl border border-blue-500/20 mt-4">
-                    <p class="text-xs text-blue-300 font-bold">💡 İPUCU:</p>
-                    <p class="text-xs text-slate-400 mt-1">Daha net sonuçlar için mikrofonun konuşmacıya yakın olduğundan emin olun.</p>
-                </div>
+            <h3 class="text-2xl font-bold text-white border-b border-slate-700 pb-2">Hızlı İpuçları</h3>
+            <p class="text-sm text-slate-400">Mikrofon izni vermeyi unutmayın. En iyi sonuç için ortamın sessiz olduğundan emin olun.</p>
+            <div class="bg-blue-500/10 p-4 rounded-xl border border-blue-500/20 mt-4">
+                <p class="text-xs text-blue-300 font-bold">💡 SİSTEM DURUMU:</p>
+                <p class="text-xs text-slate-400 mt-1">Sunucular aktif. Çeviri motoru hazır.</p>
             </div>
         </div>
 
