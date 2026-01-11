@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Lecture Assistant | Global Student Innovation</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <style>
         .lang-hidden { display: none; }
         .glass { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(15px); }
@@ -41,7 +40,7 @@
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             <div class="relative group">
                 <img src="/static/team.jpg" alt="Ekibimiz" class="rounded-[3rem] shadow-2xl border-2 border-slate-700 opacity-80 group-hover:opacity-100 transition duration-500">
-                <div class="absolute -top-4 -left-4 bg-sky-500 px-6 py-2 rounded-xl font-bold text-sm tracking-widest uppercase">Student Project</div>
+                <div class="absolute -top-4 -left-4 bg-sky-500 px-6 py-2 rounded-xl font-bold text-sm tracking-widest uppercase shadow-xl shadow-sky-900/40">Student Project</div>
             </div>
             <div>
                 <h2 class="text-4xl font-black mb-8">
@@ -49,17 +48,17 @@
                     <span class="en-text lang-hidden text-sky-400">Who Are We?</span>
                 </h2>
                 <div class="space-y-6 text-slate-300 text-lg leading-relaxed">
-                    <p class="tr-text">
+                    <p class="tr-text font-light">
                         Bizler, dil bariyerinin akademik başarının önünde bir engel olmaması gerektiğine inanan bir grup <strong>üniversite öğrencisiyiz.</strong>
                     </p>
-                    <p class="tr-text">
-                        Özellikle değişim programlarında veya yabancı dilde eğitim veren okullarda, öğrencilerin dersin ruhunu kaçırdığını fark ettik. Bu projeyi; dili yeterli olmayan arkadaşlarımızın dersleri ana dillerinde, sanki hocaları Türkçe konuşuyormuş gibi dinleyebilmeleri için geliştirdik. Bizim için bu sadece bir kodlama ödevi değil, <strong>eğitimde fırsat eşitliği</strong> mücadelesidir.
+                    <p class="tr-text font-light">
+                        Özellikle uluslararası ortamlarda öğrencilerin dersin ruhunu kaçırdığını fark ettik. Bu projeyi; dili yeterli olmayan arkadaşlarımızın dersleri sanki hocaları ana dillerinde konuşuyormuş gibi dinleyebilmeleri için geliştirdik. Bizim için bu sadece bir ödev değil, <strong>eğitimde fırsat eşitliği</strong> mücadelesidir.
                     </p>
-                    <p class="en-text lang-hidden">
+                    <p class="en-text lang-hidden font-light">
                         We are a group of <strong>university students</strong> who believe language should never be a barrier to academic excellence.
                     </p>
-                    <p class="en-text lang-hidden">
-                        We noticed how students lose the essence of lectures in international or foreign-language environments. We built this project so our peers can listen to their professors as if they were speaking in their native language. To us, this is more than an assignment; it's a fight for <strong>educational equality.</strong>
+                    <p class="en-text lang-hidden font-light">
+                        We noticed how students lose the essence of lectures in international environments. We built this project so our peers can listen to their professors as if they were speaking in their native language. To us, this is more than an assignment; it's a fight for <strong>educational equality.</strong>
                     </p>
                 </div>
             </div>
@@ -68,8 +67,8 @@
 
     <section class="py-32 px-6 max-w-6xl mx-auto">
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="p-10 rounded-[3rem] bg-slate-900 border border-slate-800 hover:border-sky-500 transition-all duration-300">
-                <div class="text-4xl mb-6">🎙️</div>
+            <div class="p-10 rounded-[3rem] bg-slate-900 border border-slate-800 hover:border-sky-500 transition-all duration-300 group">
+                <div class="text-4xl mb-6 group-hover:scale-110 transition">🎙️</div>
                 <h3 class="text-2xl font-bold mb-4">
                     <span class="tr-text">Anlık Yakalama</span>
                     <span class="en-text lang-hidden">Instant Capture</span>
@@ -79,8 +78,8 @@
                     <span class="en-text lang-hidden">Analyzes your professor's voice with high accuracy and converts it to text instantly.</span>
                 </p>
             </div>
-            <div class="p-10 rounded-[3rem] bg-slate-900 border border-slate-800 hover:border-emerald-500 transition-all duration-300">
-                <div class="text-4xl mb-6">🧠</div>
+            <div class="p-10 rounded-[3rem] bg-slate-900 border border-slate-800 hover:border-emerald-500 transition-all duration-300 group">
+                <div class="text-4xl mb-6 group-hover:scale-110 transition">🧠</div>
                 <h3 class="text-2xl font-bold mb-4">
                     <span class="tr-text">Anlamsal Çeviri</span>
                     <span class="en-text lang-hidden">Contextual Translation</span>
@@ -90,54 +89,53 @@
                     <span class="en-text lang-hidden">Translates while preserving the spirit and context of the lecture, not just words.</span>
                 </p>
             </div>
-            <div class="p-10 rounded-[3rem] bg-slate-900 border border-slate-800 hover:border-amber-500 transition-all duration-300">
-                <div class="text-4xl mb-6">📂</div>
+            <div class="p-10 rounded-[3rem] bg-slate-900 border border-slate-800 hover:border-amber-500 transition-all duration-300 group">
+                <div class="text-4xl mb-6 group-hover:scale-110 transition">📂</div>
                 <h3 class="text-2xl font-bold mb-4">
                     <span class="tr-text">Akıllı Arşiv</span>
                     <span class="en-text lang-hidden">Smart Archive</span>
                 </h3>
                 <p class="text-slate-400 text-sm leading-relaxed">
-                    <span class="tr-text">Ders notlarını saniyeler içinde telefonunuza indirir ve PDF/TXT olarak saklar.</span>
-                    <span class="en-text lang-hidden">Downloads lecture notes to your phone in seconds as PDF or TXT files.</span>
+                    <span class="tr-text">Ders notlarını saniyeler içinde telefonunuza indirir ve saklamanızı sağlar.</span>
+                    <span class="en-text lang-hidden">Downloads lecture notes to your phone in seconds for future reference.</span>
                 </p>
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-slate-900/60 border-t border-slate-800">
-        <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12">
-            <div class="text-left">
-                <h2 class="text-3xl font-black mb-4">
-                    <span class="tr-text">Postere Ekleyin</span>
-                    <span class="en-text lang-hidden">Add to Your Poster</span>
-                </h2>
-                <p class="text-slate-400 mb-6 max-w-sm leading-relaxed">
-                    <span class="tr-text">Bu QR kod, sunum posteriniz için özel olarak hazırlandı. Okutan herkes bu profesyonel sayfaya erişebilir.</span>
-                    <span class="en-text lang-hidden">This QR code is specially prepared for your poster. Anyone who scans it can access this page.</span>
-                </p>
-            </div>
-            <div class="bg-white p-6 rounded-[2rem] shadow-[0_0_50px_rgba(56,189,248,0.2)]">
-                <div id="qrcode"></div>
-                <p class="text-black text-[10px] mt-4 font-black text-center uppercase tracking-widest">Scan to Experience</p>
+    <section class="py-24 bg-gradient-to-t from-[#0f172a] to-[#0b0f1a] border-t border-slate-800 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-5xl font-black mb-8 italic">
+                <span class="tr-text text-white">Teşekkürler</span>
+                <span class="en-text lang-hidden text-white">Thank You</span>
+            </h2>
+            <p class="text-slate-400 text-lg mb-12 font-light">
+                <span class="tr-text">Projemize gösterdiğiniz ilgi için teşekkür ederiz. Geleceğin eğitimini birlikte inşa ediyoruz.</span>
+                <span class="en-text lang-hidden">Thank you for your interest in our project. We are building the future of education together.</span>
+            </p>
+
+            <div class="bg-slate-900/50 p-10 rounded-[2.5rem] border border-slate-800 inline-block">
+                <h3 class="text-sky-400 font-bold uppercase tracking-widest text-xs mb-4">
+                    <span class="tr-text">Bize Ulaşın</span>
+                    <span class="en-text lang-hidden">Contact Us</span>
+                </h3>
+                <a href="mailto:info@ailecture.com" class="text-2xl md:text-3xl font-black hover:text-sky-300 transition break-all">
+                    info@ailecture.com
+                </a>
+                <div class="mt-6 flex justify-center gap-4">
+                    <span class="w-2 h-2 bg-sky-500 rounded-full"></span>
+                    <span class="w-2 h-2 bg-emerald-500 rounded-full"></span>
+                    <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 text-center text-slate-700 text-[10px] uppercase tracking-[0.2em] font-bold">
+    <footer class="py-12 text-center text-slate-700 text-[10px] uppercase tracking-[0.3em] font-bold">
         &copy; 2026 AI Lecture | Innovation for Global Students
     </footer>
 
     <script>
-        // QR Kod
-        new QRCode(document.getElementById("qrcode"), {
-            text: window.location.href,
-            width: 160,
-            height: 160,
-            colorDark : "#000000",
-            colorLight : "#ffffff",
-            correctLevel : QRCode.CorrectLevel.H
-        });
-
         // Dil Seçimi Scripti
         let currentLang = 'TR';
         function toggleLanguage() {
