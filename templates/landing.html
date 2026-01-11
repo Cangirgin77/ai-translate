@@ -9,6 +9,7 @@
         .lang-hidden { display: none; }
         .glass { background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(20px); }
         .gradient-text { background: linear-gradient(90deg, #38bdf8, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        html { scroll-behavior: smooth; } /* Yumuşak kaydırma için */
         details > summary { list-style: none; }
         details > summary::-webkit-details-marker { display: none; }
     </style>
@@ -18,7 +19,7 @@
     <nav class="sticky top-0 z-[100] glass border-b border-slate-800 px-6 py-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center gap-8">
-                <div class="text-2xl font-black text-sky-400 tracking-tighter uppercase">AI Turbo Assistance </div>
+                <div class="text-2xl font-black text-sky-400 tracking-tighter uppercase">AI Turbo Assistance</div>
                 <div class="hidden md:flex gap-6 text-sm font-medium text-slate-400">
                     <a href="#features" class="hover:text-white transition tr-text">Özellikler</a>
                     <a href="#features" class="hover:text-white transition en-text lang-hidden">Features</a>
@@ -95,8 +96,8 @@
 
     <section id="solutions" class="py-24 max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-16">
         <div class="col-span-1 border-r border-slate-800 pr-10">
-            <h2 class="text-4xl font-black mb-6 tr-text">Neden AI Lecture?</h2>
-            <h2 class="text-4xl font-black mb-6 en-text lang-hidden">Why AI Lecture?</h2>
+            <h2 class="text-4xl font-black mb-6 tr-text">Neden AI Turbo?</h2>
+            <h2 class="text-4xl font-black mb-6 en-text lang-hidden">Why AI Turbo?</h2>
             <p class="text-slate-400 mb-8 tr-text">Eğitimin her alanında, dil sınırlarını ortadan kaldıran çözümler sunuyoruz.</p>
             <p class="text-slate-400 mb-8 en-text lang-hidden">We offer solutions that break language boundaries in every field of education.</p>
             <div class="space-y-4">
@@ -108,9 +109,11 @@
         <div class="col-span-2 space-y-12">
             <div class="bg-slate-900/50 p-8 rounded-3xl border border-slate-800">
                 <h3 class="text-2xl font-bold mb-4">Üniversite Eğitiminde Devrim</h3>
-                <p class="text-slate-400 leading-relaxed">Yurt dışında okuyan veya yabancı dilde eğitim alan öğrenciler için ders takibi artık kabus değil. AI Lecture, hocanızın anlatımını anında kendi dilinize çevirerek akademik başarınızı destekler.</p>
+                <p class="text-slate-400 leading-relaxed">Yurt dışında okuyan veya yabancı dilde eğitim alan öğrenciler için ders takibi artık kabus değil. AI Turbo Assistance, hocanızın anlatımını anında kendi dilinize çevirerek akademik başarınızı destekler.</p>
             </div>
-            <img src="/static/usage-scene.jpg" alt="Usage" class="w-full rounded-3xl shadow-2xl opacity-70">
+            <div class="w-full h-64 bg-slate-800 rounded-3xl flex items-center justify-center text-slate-500">
+                [Görsel Alanı]
+            </div>
         </div>
     </section>
 
@@ -120,7 +123,7 @@
             <h2 class="text-center text-4xl font-black mb-16 en-text lang-hidden">Why Choose Us?</h2>
             <div class="grid md:grid-cols-3 gap-1 px-4 bg-slate-800 rounded-3xl overflow-hidden border border-slate-700">
                 <div class="p-8 bg-slate-900/80 text-center font-bold">Feature</div>
-                <div class="p-8 bg-sky-500/20 text-center font-bold text-sky-400">AI Lecture</div>
+                <div class="p-8 bg-sky-500/20 text-center font-bold text-sky-400">AI Turbo</div>
                 <div class="p-8 bg-slate-900/80 text-center font-bold text-slate-500">Traditional Tools</div>
                 
                 <div class="p-6 border-t border-slate-800">Real-time Translation</div>
@@ -138,7 +141,7 @@
         </div>
     </section>
 
-    <section class="py-24 max-w-4xl mx-auto px-6">
+    <section id="guide" class="py-24 max-w-4xl mx-auto px-6">
         <h2 class="text-3xl font-bold mb-10 text-center">Frequently Asked Questions</h2>
         <div class="space-y-4">
             <details class="group bg-slate-900 p-6 rounded-2xl border border-slate-800">
@@ -163,12 +166,12 @@
         <p class="text-slate-400 mb-12 max-w-xl mx-auto">Geleceğin eğitim teknolojilerini desteklediğiniz için teşekkür ederiz.</p>
         <div class="bg-slate-900 p-10 rounded-[3rem] border border-slate-800 inline-block shadow-2xl">
             <p class="uppercase tracking-widest text-xs font-bold text-sky-400 mb-2">Reach the Team</p>
-            <a href="mailto:info@ailecture.com" class="text-3xl font-black hover:text-sky-300 transition">info@ailecture.com</a>
+            <a href="mailto:info@aiturbo.com" class="text-3xl font-black hover:text-sky-300 transition">info@aiturbo.com</a>
         </div>
     </section>
 
     <footer class="py-10 text-center text-slate-700 text-[10px] uppercase tracking-widest font-bold">
-        &copy; 2026 AI Lecture | Innovation for Global Students
+        &copy; 2026 AI Turbo Assistance | Innovation for Global Students
     </footer>
 
     <script>
