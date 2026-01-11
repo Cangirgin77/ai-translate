@@ -3,68 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Lecture - Revolution in Education</title>
+    <title>AI Turbo Asistance - Eğitimde Yeni Nesil Çeviri</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">AI LECTURE</a> 
+            <a href="#" class="logo">AI TURBO ASISTANCE</a> 
             <div class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#solutions">Solutions</a>
-                <a href="#guide">User Guide</a> <button class="launch-btn">Launch App</button>
+                <a href="#features">Özellikler</a>
+                <a href="#details">Detaylar</a>
+                <a href="#why-us">Neden Biz?</a>
+                </div>
+            <div class="lang-select">
+                <span>TR</span> <i class="fas fa-chevron-down"></i>
             </div>
         </div>
     </nav>
 
     <header class="hero">
-        <div class="video-wrapper">
-            <video autoplay muted loop playsinline class="bg-video">
-                <source src="intro-video.mp4" type="video/mp4">
-            </video>
-            <div class="hero-overlay">
-                <h1>Revolution in University Education</h1>
-                <p>Instantly translate your lectures into your own language.</p>
+        <div class="hero-content">
+            <h1>AI Turbo Asistance: Dil Engelini Kaldırın</h1>
+            <p>Eğitim hayatınızda artık tek bir kelimeyi bile kaçırmayacaksınız. Akıllı yapay zekamız ile dersleri anında kendi dilinizde dinleyin.</p>
+            <div class="video-container">
+                <video controls autoplay muted loop playsinline class="demo-video">
+                    <source src="demo-video.mp4" type="video/mp4">
+                    Tarayıcınız video etiketini desteklemiyor.
+                </video>
             </div>
         </div>
     </header>
 
-    <section id="solutions" class="solutions-section">
-        <div class="solutions-left">
-            <h2>Why AI Lecture?</h2>
-            <button class="tab-btn active" onclick="showTab('univ')">Global Universities</button>
-            <button class="tab-btn" onclick="showTab('seminar')">International Seminars</button>
-            <button class="tab-btn" onclick="showTab('language')">Language Schools</button>
-        </div>
-        <div class="solutions-right" id="tab-content">
-            <div class="content-box">
-                <h3 id="tab-title">Revolution in University Education</h3>
-                <p id="tab-text">Following lectures is no longer a nightmare for students studying abroad.</p>
+    <section id="details" class="details-section">
+        <h2>Eğitimin Her Alanında Yanınızda</h2>
+        <div class="details-grid">
+            <div class="detail-box">
+                <i class="fas fa-university"></i>
+                <h3>Global Üniversiteler</h3>
+                <p>Yurt dışında okuyan öğrenciler için ders takibi artık kabus değil. AI Turbo Asistance, hocanızın anlatımını anında dilinize çevirerek akademik başarınızı destekler.</p>
+            </div>
+            <div class="detail-box">
+                <i class="fas fa-globe"></i>
+                <h3>Uluslararası Seminerler</h3>
+                <p>Dünyanın dört bir yanındaki konferanslara anlık çeviri desteği ile katılın. Hiçbir bilgiyi kaçırmadan, alanınızdaki gelişmeleri takip edin.</p>
+            </div>
+            <div class="detail-box">
+                <i class="fas fa-book-reader"></i>
+                <h3>Dil Okulları</h3>
+                <p>Dil öğrenme sürecinizi yapay zeka destekli asistanımızla hızlandırın. Anlamadığınız yerleri anında öğrenin ve pratiğinizi geliştirin.</p>
             </div>
         </div>
     </section>
 
-    <section id="why-us" class="sticky-section">
-        <h2>Why Choose Us?</h2>
-        <div class="sticky-container">
-            <div class="note yellow" style="transform: rotate(-3deg);">
-                <p>"AI Lecture supports academic success by translating instantly."</p>
-                <span>- Student Review</span>
+    <section id="why-us" class="why-choose-us-section">
+        <h2>Neden AI Turbo Asistance?</h2>
+        <div class="sticky-notes-container">
+            <div class="sticky-note yellow" style="transform: rotate(-3deg);">
+                <p>"Gerçek zamanlı çeviri hızı inanılmaz. Derslerde not almak artık çok daha kolay."</p>
+                <span>- Üniversite Öğrencisi</span>
             </div>
-            <div class="note purple" style="transform: rotate(2deg);">
-                <p>"The best solution for international seminars and conferences."</p>
-                <span>- Professor X</span>
+            <div class="sticky-note purple" style="transform: rotate(2deg);">
+                <p>"Yurt dışındaki seminerleri takip edebilmek kariyerim için büyük bir avantaj sağladı."</p>
+                <span>- Araştırmacı</span>
             </div>
-            <div class="note orange" style="transform: rotate(-1deg);">
-                <p>"Robust, AI-enhanced translator for every field of education."</p>
-                <span>- Tech Insider</span>
+            <div class="sticky-note orange" style="transform: rotate(-1deg);">
+                <p>"Doğal ses sentezi sayesinde çevirileri dinlemek hiç yorucu değil."</p>
+                <span>- Dil Öğrencisi</span>
             </div>
         </div>
     </section>
 
-    <button id="backToTop" onclick="scrollToTop()">↑</button>
+    <section id="comparison" class="comparison-section">
+        <h2>Diğerlerinden Farkımız</h2>
+        <div class="comparison-table">
+            <div class="table-row header-row">
+                <div class="cell feature-cell">Özellik</div>
+                <div class="cell ai-cell">AI Turbo Asistance</div>
+                <div class="cell traditional-cell">Geleneksel Araçlar</div>
+            </div>
+            <div class="table-row">
+                <div class="cell feature-cell">Gerçek Zamanlı Çeviri</div>
+                <div class="cell ai-cell"><i class="fas fa-check"></i> (0.2s Gecikme)</div>
+                <div class="cell traditional-cell"><i class="fas fa-times"></i> (Manuel/Yavaş)</div>
+            </div>
+            <div class="table-row">
+                <div class="cell feature-cell">Bağlam Farkındalığı</div>
+                <div class="cell ai-cell"><i class="fas fa-check"></i> (Gelişmiş NLP)</div>
+                <div class="cell traditional-cell"><i class="fas fa-times"></i> (Kelime Kelime)</div>
+            </div>
+            <div class="table-row">
+                <div class="cell feature-cell">Ses Sentezi</div>
+                <div class="cell ai-cell"><i class="fas fa-check"></i> (Doğal Ses)</div>
+                <div class="cell traditional-cell"><i class="fas fa-times"></i> (Yok)</div>
+            </div>
+        </div>
+    </section>
+
+    <button id="backToTop" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
