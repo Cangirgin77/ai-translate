@@ -1,27 +1,22 @@
 /* Genel Ayarlar */
 body {
-    background-color: #0a0e17; /* Koyu lacivert arka plan */
+    background-color: #05080f; /* Koyu Tema */
     color: #e0e0e0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     margin: 0;
     scroll-behavior: smooth;
-    line-height: 1.6;
-}
-
-h1, h2, h3 {
-    color: white;
 }
 
 /* Navbar */
 #navbar {
     display: flex;
     justify-content: center;
-    background-color: #05080f;
+    background-color: #0a0e17;
     padding: 20px 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid #1f2937;
 }
 
 .nav-container {
@@ -33,246 +28,107 @@ h1, h2, h3 {
 }
 
 .logo {
+    font-size: 1.4rem;
     font-weight: 800;
-    font-size: 1.5rem;
-    color: #00a8ff; /* Mavi logo rengi */
+    color: #00a8ff;
     text-decoration: none;
     letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .nav-links a {
     color: #b0b0b0;
     text-decoration: none;
-    margin: 0 15px;
-    font-weight: 600;
+    margin-left: 20px;
+    font-size: 0.9rem;
     transition: color 0.3s;
 }
 
-.nav-links a:hover {
-    color: #00a8ff;
-}
+.nav-links a:hover { color: #00a8ff; }
 
-.lang-select {
-    display: flex;
-    align-items: center;
-    color: #b0b0b0;
-    cursor: pointer;
-}
-
-.lang-select i {
-    margin-left: 5px;
-    font-size: 0.8rem;
-}
-
-/* 1. Hero Bölümü ve Video */
+/* Hero & Video */
 .hero {
     text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(to bottom, #05080f, #0a0e17);
+    padding: 50px 20px;
 }
 
-.hero-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-}
-
-.hero-content p {
-    font-size: 1.1rem;
-    color: #b0b0b0;
-    max-width: 700px;
-    margin: 0 auto 30px;
-}
+.hero h1 { margin-bottom: 10px; font-size: 2.5rem; color: white; }
+.hero p { color: #888; margin-bottom: 30px; }
 
 .video-container {
     max-width: 800px;
     margin: 0 auto;
-    border-radius: 15px;
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 30px rgba(0, 168, 255, 0.2);
+    border: 1px solid #333;
 }
 
-.demo-video {
-    width: 100%;
-    display: block;
-}
+.demo-video { width: 100%; display: block; }
 
-/* 2. Uygulama Detayları */
-.details-section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.details-section h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-}
-
+/* Detaylar (Cards) */
+.details-section { padding: 60px 20px; background-color: #0a0e17; text-align: center; }
 .details-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.detail-box {
-    background-color: #111827;
-    padding: 30px;
-    border-radius: 12px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: left;
-}
-
-.detail-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 168, 255, 0.1);
-}
-
-.detail-box i {
-    font-size: 3rem;
-    color: #00a8ff;
-    margin-bottom: 20px;
-}
-
-.detail-box h3 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-}
-
-.detail-box p {
-    color: #b0b0b0;
-    font-size: 0.95rem;
-}
-
-/* 3. Neden Bizi Seçmelisiniz? (Sticky Notes) */
-.why-choose-us-section {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #080c14;
-}
-
-.why-choose-us-section h2 {
-    font-size: 2rem;
-    margin-bottom: 50px;
-}
-
-.sticky-notes-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: 30px auto 0;
+}
+
+.detail-box {
+    background: #111827;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: left;
+    border: 1px solid #1f2937;
+}
+
+.detail-box i { font-size: 2rem; color: #00a8ff; margin-bottom: 15px; }
+.detail-box h3 { color: white; margin-bottom: 10px; }
+
+/* Sticky Notes (Renkli Notlar) */
+.why-choose-us-section { padding: 60px 20px; text-align: center; }
+.sticky-notes-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
 }
 
 .sticky-note {
-    width: 250px;
-    height: 250px;
-    padding: 25px;
+    width: 220px;
+    height: 220px;
+    padding: 20px;
     color: #222;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease;
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* El yazısı hissi */
-    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s;
 }
+.sticky-note:hover { transform: scale(1.1) rotate(0deg) !important; z-index: 10; }
+.yellow { background: #FFD700; transform: rotate(-3deg); }
+.purple { background: #DDA0DD; transform: rotate(2deg); }
+.orange { background: #FFA500; transform: rotate(-2deg); }
 
-.sticky-note:hover {
-    transform: scale(1.05) rotate(0deg) !important;
-    z-index: 10;
-}
-
-.yellow { background: #FFD700; }
-.purple { background: #DDA0DD; }
-.orange { background: #FFA500; }
-
-.sticky-note p {
-    font-size: 1rem;
-    font-style: italic;
-}
-
-.sticky-note span {
-    align-self: flex-end;
-    font-weight: bold;
-    font-size: 0.9rem;
-}
-
-/* 4. Karşılaştırma Tablosu */
-.comparison-section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.comparison-section h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-}
-
-.comparison-table {
-    max-width: 900px;
-    margin: 0 auto;
-    background-color: #111827;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.table-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 20px;
-    border-bottom: 1px solid #1f2937;
-    align-items: center;
-}
-
-.table-row:last-child {
-    border-bottom: none;
-}
-
-.header-row {
-    background-color: #1f2937;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.cell {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.feature-cell {
-    justify-content: flex-start;
-    font-weight: 600;
-    padding-left: 20px;
-}
-
-.ai-cell { color: #00a8ff; }
-.traditional-cell { color: #ff4757; }
-.ai-cell i, .traditional-cell i { margin-right: 8px; font-size: 1.1rem; }
+/* Karşılaştırma Tablosu */
+.comparison-section { padding: 60px 20px; background-color: #0a0e17; text-align: center; }
+.comparison-table { max-width: 800px; margin: 30px auto; border: 1px solid #333; border-radius: 8px; overflow: hidden; }
+.table-row { display: grid; grid-template-columns: 1fr 1fr 1fr; padding: 15px; border-bottom: 1px solid #333; }
+.header-row { background: #1f2937; font-weight: bold; }
+.ai-cell { color: #00a8ff; font-weight: bold; }
 
 /* Başa Dön Oku */
 #backToTop {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: #00a8ff;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    font-size: 20px;
-    display: none; /* JS ile görünecek */
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-#backToTop:hover {
-    background-color: #0077cc;
-    transform: scale(1.1);
+    position: fixed; bottom: 30px; right: 30px;
+    width: 50px; height: 50px;
+    background: #00a8ff; color: white;
+    border: none; border-radius: 50%;
+    cursor: pointer; display: none;
+    font-size: 1.2rem;
 }
