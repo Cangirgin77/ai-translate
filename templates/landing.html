@@ -3,77 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Lecture Assistant | Geleceğin Eğitimi</title>
+    <title>AI Lecture Assistant | Official Product Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <style>
         .lang-hidden { display: none; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); }
     </style>
 </head>
-<body class="bg-[#0f172a] text-white font-sans transition-all duration-500">
-    <nav class="flex justify-between p-6 max-w-6xl mx-auto items-center border-b border-slate-800">
-        <div class="text-2xl font-black tracking-tighter text-sky-400">AI LECTURE</div>
-        
-        <div class="flex items-center gap-6">
-            <button onclick="toggleLanguage()" id="langBtn" class="border border-slate-600 px-4 py-1 rounded-lg hover:bg-slate-700 transition text-sm font-bold text-sky-400">
-                English 🇺🇸
-            </button>
-            <a href="/app" class="bg-sky-500 px-6 py-2 rounded-full font-bold hover:bg-sky-400 transition shadow-lg shadow-sky-500/20">
-                <span class="tr-text">Uygulamayı Aç</span>
-                <span class="en-text lang-hidden">Open App</span>
-            </a>
+<body class="bg-[#0b0f1a] text-white font-sans scroll-smooth">
+
+    <nav class="sticky top-0 z-50 glass border-b border-slate-800 p-5">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-black text-sky-400 tracking-tighter">AI LECTURE <span class="text-[10px] text-slate-500 uppercase">Beta</span></div>
+            <div class="flex gap-4">
+                <button onclick="toggleLanguage()" id="langBtn" class="text-xs font-bold border border-slate-700 px-3 py-1 rounded-md hover:bg-slate-800 transition">English 🇺🇸</button>
+                <a href="/app" class="bg-sky-600 px-5 py-2 rounded-full text-sm font-bold hover:bg-sky-500 transition shadow-lg shadow-sky-900/40">Launch App</a>
+            </div>
         </div>
     </nav>
 
-    <header class="text-center py-20 px-4">
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
-            <span class="tr-text">Dil Bariyerini <br><span class="text-sky-400">Yapay Zeka</span> İle Aşın</span>
-            <span class="en-text lang-hidden">Break Language Barriers <br>with <span class="text-sky-400">AI</span></span>
+    <section class="py-24 px-6 text-center max-w-4xl mx-auto">
+        <span class="inline-block px-4 py-1 bg-sky-500/10 text-sky-400 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4">Innovation in Education</span>
+        <h1 class="text-6xl md:text-8xl font-black mb-8 leading-none bg-gradient-to-r from-white via-sky-300 to-slate-500 bg-clip-text text-transparent">
+            <span class="tr-text">Eğitimde Sınırları <br>Kaldırın.</span>
+            <span class="en-text lang-hidden">Learn Without <br>Limits.</span>
         </h1>
-        <p class="text-slate-400 text-xl max-w-2xl mx-auto mb-10 italic">
-            <span class="tr-text">"Hocanızı dinleyin, biz anlık çevirelim. Siz sadece öğrenmeye odaklanın."</span>
-            <span class="en-text lang-hidden">"Listen to your professor, we translate instantly. Just focus on learning."</span>
+        <p class="text-slate-400 text-xl mb-12 leading-relaxed">
+            <span class="tr-text">Yapay zeka tabanlı simültane çeviri asistanı ile dersleri ana dilinizde takip edin.</span>
+            <span class="en-text lang-hidden">Follow your lectures in your native language with our AI-powered simultaneous translation assistant.</span>
         </p>
-
-        <div class="max-w-4xl mx-auto mb-12 rounded-3xl overflow-hidden border-4 border-slate-800 shadow-2xl">
-            <video controls class="w-full aspect-video bg-black">
-                <source src="/static/demo-video.mp4" type="video/mp4">
-                Tarayıcınız video desteklemiyor.
-            </video>
-        </div>
-
-        <a href="/app" class="bg-emerald-500 text-white px-10 py-5 rounded-2xl text-xl font-bold shadow-2xl hover:scale-105 transition inline-block">
-            <span class="tr-text">Sistemi Canlı Dene</span>
-            <span class="en-text lang-hidden">Try System Live</span>
-        </a>
-    </header>
-
-    <section class="max-w-6xl mx-auto py-20 px-6 grid md:grid-cols-3 gap-10">
-        <div class="bg-slate-800/50 p-6 rounded-3xl border border-slate-700">
-            <img src="/static/feature1.jpg" alt="Live Listening" class="w-full h-48 object-cover rounded-2xl mb-6 bg-slate-700">
-            <h3 class="text-2xl font-bold mb-4 text-sky-400 tr-text">Canlı Dinleme</h3>
-            <h3 class="text-2xl font-bold mb-4 text-sky-400 en-text lang-hidden">Live Listening</h3>
-            <p class="text-slate-400 tr-text">Ders ortamındaki her kelimeyi yüksek hassasiyetle yakalar.</p>
-            <p class="text-slate-400 en-text lang-hidden">Captures every word in the classroom with high precision.</p>
-        </div>
-
-        <div class="bg-slate-800/50 p-6 rounded-3xl border border-slate-700">
-            <img src="/static/feature2.jpg" alt="AI Translation" class="w-full h-48 object-cover rounded-2xl mb-6 bg-slate-700">
-            <h3 class="text-2xl font-bold mb-4 text-emerald-400 tr-text">Akıllı Çeviri</h3>
-            <h3 class="text-2xl font-bold mb-4 text-emerald-400 en-text lang-hidden">Smart Translation</h3>
-            <p class="text-slate-400 tr-text">Cümleleri anlamını bozmadan İngilizceye çevirir.</p>
-            <p class="text-slate-400 en-text lang-hidden">Translates sentences into English without losing context.</p>
-        </div>
-
-        <div class="bg-slate-800/50 p-6 rounded-3xl border border-slate-700">
-            <img src="/static/feature3.jpg" alt="Notes" class="w-full h-48 object-cover rounded-2xl mb-6 bg-slate-700">
-            <h3 class="text-2xl font-bold mb-4 text-amber-400 tr-text">Ders Kaydı</h3>
-            <h3 class="text-2xl font-bold mb-4 text-amber-400 en-text lang-hidden">Lesson Notes</h3>
-            <p class="text-slate-400 tr-text">Ders sonunda tüm dökümü tek tıkla indirmenizi sağlar.</p>
-            <p class="text-slate-400 en-text lang-hidden">Download the entire transcript with one click at the end.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="/app" class="bg-emerald-500 text-white px-10 py-5 rounded-2xl text-xl font-bold hover:scale-105 transition shadow-xl shadow-emerald-900/20">Try System Now</a>
+            <a href="#details" class="bg-slate-800 px-10 py-5 rounded-2xl text-xl font-bold hover:bg-slate-700 transition">Learn More</a>
         </div>
     </section>
 
+    <div class="max-w-5xl mx-auto px-6 mb-32">
+        <div class="relative rounded-[2.5rem] overflow-hidden border-8 border-slate-800 shadow-2xl bg-slate-900 aspect-video flex items-center justify-center">
+            <img src="/static/hero-preview.jpg" alt="AI Interface" class="absolute inset-0 w-full h-full object-cover opacity-50">
+            <div class="relative z-10 text-center">
+                <div class="w-20 h-20 bg-sky-500 rounded-full flex items-center justify-center mx-auto mb-4 cursor-pointer hover:scale-110 transition">
+                    <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M4.5 3.5v13l11-6.5-11-6.5z"/></svg>
+                </div>
+                <p class="font-bold text-sky-400 uppercase tracking-widest text-xs">Watch Demo</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="details" class="max-w-6xl mx-auto px-6 py-20 border-t border-slate-900">
+        <div class="grid md:grid-cols-2 gap-20 items-center">
+            <div>
+                <h2 class="text-4xl font-bold mb-6">Nasıl Çalışır?</h2>
+                <div class="space-y-8">
+                    <div class="flex gap-6">
+                        <div class="w-12 h-12 bg-sky-500/20 text-sky-400 rounded-2xl flex items-center justify-center font-bold text-xl shrink-0">1</div>
+                        <div>
+                            <h4 class="font-bold text-lg">Ses Yakalama</h4>
+                            <p class="text-slate-400 text-sm mt-2">Gelişmiş mikrofon algoritmalarımız sınıf gürültüsünü filtreler ve sadece konuşmacıya odaklanır.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-2xl flex items-center justify-center font-bold text-xl shrink-0">2</div>
+                        <div>
+                            <h4 class="font-bold text-lg">AI Analizi & Çeviri</h4>
+                            <p class="text-slate-400 text-sm mt-2">Bulut tabanlı NLP motorumuz metni anlık olarak analiz eder ve en doğru bağlamda çevirir.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="w-12 h-12 bg-amber-500/20 text-amber-400 rounded-2xl flex items-center justify-center font-bold text-xl shrink-0">3</div>
+                        <div>
+                            <h4 class="font-bold text-lg">Ders Çıktısı</h4>
+                            <p class="text-slate-400 text-sm mt-2">Tüm konuşma ve çeviriler ders sonunda indirilebilir PDF/TXT dosyasına dönüştürülür.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-slate-900 p-8 rounded-[3rem] border border-slate-800">
+                <h3 class="text-2xl font-bold mb-4">Teknik Altyapı</h3>
+                <ul class="space-y-4 text-slate-400 text-sm">
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-sky-500 rounded-full"></span> Flask / Python Backend</li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-sky-500 rounded-full"></span> Google Neural Machine Translation</li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-sky-500 rounded-full"></span> Vercel Serverless Deployment</li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-sky-500 rounded-full"></span> Web Audio API Implementation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-900/50 border-y border-slate-900">
+        <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-10">
+            <div class="text-left max-w-md">
+                <h2 class="text-3xl font-bold mb-4">Postere Ekleyin</h2>
+                <p class="text-slate-400 mb-6">Sunum posteriniz için hazırladığımız QR kod. Okutan herkes doğrudan bu sayfaya ve uygulamaya erişebilir.</p>
+                <button onclick="window.print()" class="text-sky-400 font-bold hover:underline text-sm">Sayfayı PDF olarak kaydet</button>
+            </div>
+            <div class="bg-white p-6 rounded-3xl shadow-2xl shadow-sky-500/10">
+                <div id="qrcode"></div>
+                <p class="text-black text-[10px] mt-4 font-bold text-center uppercase tracking-widest">Scan to Experience</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-slate-600 text-xs border-t border-slate-900">
+        <p>&copy; 2026 AI Lecture Project. Built for Educational Excellence.</p>
+    </footer>
+
     <script>
+        // QR Kod Oluşturma
+        new QRCode(document.getElementById("qrcode"), {
+            text: window.location.href,
+            width: 180,
+            height: 180,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+
+        // Dil Seçimi
         let currentLang = 'TR';
         function toggleLanguage() {
             const trTexts = document.querySelectorAll('.tr-text');
