@@ -29,8 +29,12 @@
                     <div class="hidden md:flex gap-6 text-sm font-medium text-slate-400">
                         <a href="#features" class="hover:text-white transition tr-text">Özellikler</a>
                         <a href="#features" class="hover:text-white transition en-text lang-hidden">Features</a>
+                        
                         <a href="#solutions" class="hover:text-white transition tr-text">Çözümler</a>
                         <a href="#solutions" class="hover:text-white transition en-text lang-hidden">Solutions</a>
+
+                        <a href="#guide" class="hover:text-white transition tr-text">Kullanım Rehberi</a>
+                        <a href="#guide" class="hover:text-white transition en-text lang-hidden">User Guide</a>
                     </div>
                 </div>
                 <div class="flex gap-4">
@@ -106,9 +110,37 @@
             </div>
             <div class="col-span-2 space-y-12">
                 <div class="bg-slate-900/50 p-8 rounded-3xl border border-slate-800">
-                    <h3 class="text-2xl font-bold mb-4">Üniversite Eğitiminde Devrim</h3>
-                    <p class="text-slate-400 leading-relaxed">Yurt dışında okuyan veya yabancı dilde eğitim alan öğrenciler için ders takibi artık kabus değil. AI Turbo Assistance, hocanızın anlatımını anında kendi dilinize çevirerek akademik başarınızı destekler.</p>
+                    <h3 class="text-2xl font-bold mb-4 tr-text">Üniversite Eğitiminde Devrim</h3>
+                    <h3 class="text-2xl font-bold mb-4 en-text lang-hidden">Revolution in University Education</h3>
+                    
+                    <p class="text-slate-400 leading-relaxed tr-text">Yurt dışında okuyan veya yabancı dilde eğitim alan öğrenciler için ders takibi artık kabus değil. AI Turbo Assistance, hocanızın anlatımını anında kendi dilinize çevirerek akademik başarınızı destekler.</p>
+                    <p class="text-slate-400 leading-relaxed en-text lang-hidden">Following lectures is no longer a nightmare for students studying abroad. AI Turbo Assistance instantly translates your professor's speech into your language, supporting your academic success.</p>
                 </div>
+            </div>
+        </section>
+
+        <section id="guide" class="py-24 max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-10 text-center tr-text">Sıkça Sorulan Sorular</h2>
+            <h2 class="text-3xl font-bold mb-10 text-center en-text lang-hidden">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <details class="group bg-slate-900 p-6 rounded-2xl border border-slate-800">
+                    <summary class="font-bold cursor-pointer flex justify-between items-center">
+                        <span class="tr-text">Sistem her cihazda çalışır mı?</span>
+                        <span class="en-text lang-hidden">Does it work on every device?</span>
+                        <span class="group-open:rotate-180 transition">▼</span>
+                    </summary>
+                    <p class="mt-4 text-slate-400 text-sm tr-text">Evet, tüm tarayıcılardan erişilebilir.</p>
+                    <p class="mt-4 text-slate-400 text-sm en-text lang-hidden">Yes, accessible from all browsers.</p>
+                </details>
+                <details class="group bg-slate-900 p-6 rounded-2xl border border-slate-800">
+                    <summary class="font-bold cursor-pointer flex justify-between items-center">
+                        <span class="tr-text">Biz kimiz? (Hakkımızda)</span>
+                        <span class="en-text lang-hidden">Who are we? (About Us)</span>
+                        <span class="group-open:rotate-180 transition">▼</span>
+                    </summary>
+                    <p class="mt-4 text-slate-400 text-sm tr-text">Biz, eğitimde fırsat eşitliği için çalışan bir grup üniversite öğrencisiyiz.</p>
+                    <p class="mt-4 text-slate-400 text-sm en-text lang-hidden">We are a group of university students working for equal opportunity in education.</p>
+                </details>
             </div>
         </section>
 
@@ -199,7 +231,7 @@
         function showLanding() {
             document.getElementById('app-page').classList.add('hidden-section');
             document.getElementById('landing-page').classList.remove('hidden-section');
-            stopSystem(); // Ana sayfaya dönünce mikrofonu kapat
+            stopSystem(); 
             window.scrollTo(0,0);
         }
 
@@ -253,8 +285,7 @@
                 const text = event.results[event.results.length - 1][0].transcript;
                 document.getElementById('tr_p').innerText = text;
                 
-                // Simülasyon (Backend olmadığı için basit çeviri mantığı veya placeholder)
-                // Gerçek projede burası API'ye gider.
+                // Simülasyon
                 document.getElementById('en_p').innerText = "Translating: " + text; 
                 fullScript += `TR: ${text}\nEN: (Translated)\n\n`;
             };
