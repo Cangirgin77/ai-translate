@@ -5,40 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Lecture Assistant | Geleceğin Eğitimi</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .lang-hidden { display: none; }
+    </style>
 </head>
-<body class="bg-[#0f172a] text-white">
-    <nav class="flex justify-between p-6 max-w-6xl mx-auto items-center">
+<body class="bg-[#0f172a] text-white font-sans transition-all duration-500">
+    <nav class="flex justify-between p-6 max-w-6xl mx-auto items-center border-b border-slate-800">
         <div class="text-2xl font-black tracking-tighter text-sky-400">AI LECTURE</div>
-        <a href="/app" class="bg-sky-500 px-6 py-2 rounded-full font-bold hover:bg-sky-400 transition">Uygulamayı Aç</a>
+        
+        <div class="flex items-center gap-6">
+            <button onclick="toggleLanguage()" id="langBtn" class="border border-slate-600 px-4 py-1 rounded-lg hover:bg-slate-700 transition text-sm font-bold text-sky-400">
+                English 🇺🇸
+            </button>
+            <a href="/app" class="bg-sky-500 px-6 py-2 rounded-full font-bold hover:bg-sky-400 transition shadow-lg shadow-sky-500/20">
+                <span class="tr-text">Uygulamayı Aç</span>
+                <span class="en-text lang-hidden">Open App</span>
+            </a>
+        </div>
     </nav>
 
-    <header class="text-center py-24 px-4 bg-gradient-to-b from-[#0f172a] to-[#1e293b]">
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Dil Bariyerini <br><span class="text-sky-400">Yapay Zeka</span> İle Aşın</h1>
-        <p class="text-slate-400 text-xl max-w-2xl mx-auto mb-10 italic">"Hocanızı dinleyin, biz anlık çevirelim. Siz sadece öğrenmeye odaklanın."</p>
-        <a href="/app" class="bg-emerald-500 text-white px-10 py-5 rounded-2xl text-xl font-bold shadow-2xl hover:scale-105 transition inline-block">Sistemi Canlı Dene</a>
+    <header class="text-center py-20 px-4">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+            <span class="tr-text">Dil Bariyerini <br><span class="text-sky-400">Yapay Zeka</span> İle Aşın</span>
+            <span class="en-text lang-hidden">Break Language Barriers <br>with <span class="text-sky-400">AI</span></span>
+        </h1>
+        <p class="text-slate-400 text-xl max-w-2xl mx-auto mb-10 italic">
+            <span class="tr-text">"Hocanızı dinleyin, biz anlık çevirelim. Siz sadece öğrenmeye odaklanın."</span>
+            <span class="en-text lang-hidden">"Listen to your professor, we translate instantly. Just focus on learning."</span>
+        </p>
+
+        <div class="max-w-4xl mx-auto mb-12 rounded-3xl overflow-hidden border-4 border-slate-800 shadow-2xl">
+            <video controls class="w-full aspect-video bg-black">
+                <source src="/static/demo-video.mp4" type="video/mp4">
+                Tarayıcınız video desteklemiyor.
+            </video>
+        </div>
+
+        <a href="/app" class="bg-emerald-500 text-white px-10 py-5 rounded-2xl text-xl font-bold shadow-2xl hover:scale-105 transition inline-block">
+            <span class="tr-text">Sistemi Canlı Dene</span>
+            <span class="en-text lang-hidden">Try System Live</span>
+        </a>
     </header>
 
     <section class="max-w-6xl mx-auto py-20 px-6 grid md:grid-cols-3 gap-10">
-        <div class="bg-slate-800/50 p-8 rounded-3xl border border-slate-700">
-            <h3 class="text-2xl font-bold mb-4 text-sky-400">1. Canlı Dinleme</h3>
-            <p class="text-slate-400">Yüksek hassasiyetli mikrofon erişimi ile sınıf ortamındaki her kelimeyi yakalar.</p>
+        <div class="bg-slate-800/50 p-6 rounded-3xl border border-slate-700">
+            <img src="/static/feature1.jpg" alt="Live Listening" class="w-full h-48 object-cover rounded-2xl mb-6 bg-slate-700">
+            <h3 class="text-2xl font-bold mb-4 text-sky-400 tr-text">Canlı Dinleme</h3>
+            <h3 class="text-2xl font-bold mb-4 text-sky-400 en-text lang-hidden">Live Listening</h3>
+            <p class="text-slate-400 tr-text">Ders ortamındaki her kelimeyi yüksek hassasiyetle yakalar.</p>
+            <p class="text-slate-400 en-text lang-hidden">Captures every word in the classroom with high precision.</p>
         </div>
-        <div class="bg-slate-800/50 p-8 rounded-3xl border border-slate-700">
-            <h3 class="text-2xl font-bold mb-4 text-emerald-400">2. Anlık Çeviri</h3>
-            <p class="text-slate-400">NLP (Doğal Dil İşleme) kullanarak cümleleri anlamlı bir şekilde İngilizceye çevirir.</p>
+
+        <div class="bg-slate-800/50 p-6 rounded-3xl border border-slate-700">
+            <img src="/static/feature2.jpg" alt="AI Translation" class="w-full h-48 object-cover rounded-2xl mb-6 bg-slate-700">
+            <h3 class="text-2xl font-bold mb-4 text-emerald-400 tr-text">Akıllı Çeviri</h3>
+            <h3 class="text-2xl font-bold mb-4 text-emerald-400 en-text lang-hidden">Smart Translation</h3>
+            <p class="text-slate-400 tr-text">Cümleleri anlamını bozmadan İngilizceye çevirir.</p>
+            <p class="text-slate-400 en-text lang-hidden">Translates sentences into English without losing context.</p>
         </div>
-        <div class="bg-slate-800/50 p-8 rounded-3xl border border-slate-700">
-            <h3 class="text-2xl font-bold mb-4 text-amber-400">3. Sesli Asistan</h3>
-            <p class="text-slate-400">Çevirilen metinleri kristal netliğinde seslendirerek kulaklıktan dinlemenizi sağlar.</p>
+
+        <div class="bg-slate-800/50 p-6 rounded-3xl border border-slate-700">
+            <img src="/static/feature3.jpg" alt="Notes" class="w-full h-48 object-cover rounded-2xl mb-6 bg-slate-700">
+            <h3 class="text-2xl font-bold mb-4 text-amber-400 tr-text">Ders Kaydı</h3>
+            <h3 class="text-2xl font-bold mb-4 text-amber-400 en-text lang-hidden">Lesson Notes</h3>
+            <p class="text-slate-400 tr-text">Ders sonunda tüm dökümü tek tıkla indirmenizi sağlar.</p>
+            <p class="text-slate-400 en-text lang-hidden">Download the entire transcript with one click at the end.</p>
         </div>
     </section>
 
-    <section class="bg-slate-800/30 py-20 px-6 text-center">
-        <h2 class="text-3xl font-bold mb-6">Vizyonumuz</h2>
-        <p class="max-w-3xl mx-auto text-slate-300 text-lg leading-relaxed">
-            Amacımız, uluslararası eğitim ortamında dil sorununu ortadan kaldırmak. Öğrencilerin ders takibini kolaylaştırmak ve 
-            herkesin kendi ana dilinde eğitim alabileceği bir gelecek inşa etmek için buradayız.
-        </p>
-    </section>
+    <script>
+        let currentLang = 'TR';
+        function toggleLanguage() {
+            const trTexts = document.querySelectorAll('.tr-text');
+            const enTexts = document.querySelectorAll('.en-text');
+            const btn = document.getElementById('langBtn');
+
+            if (currentLang === 'TR') {
+                trTexts.forEach(el => el.classList.add('lang-hidden'));
+                enTexts.forEach(el => el.classList.remove('lang-hidden'));
+                btn.innerText = "Türkçe 🇹🇷";
+                currentLang = 'EN';
+            } else {
+                trTexts.forEach(el => el.classList.remove('lang-hidden'));
+                enTexts.forEach(el => el.classList.add('lang-hidden'));
+                btn.innerText = "English 🇺🇸";
+                currentLang = 'TR';
+            }
+        }
+    </script>
 </body>
 </html>
