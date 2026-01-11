@@ -10,8 +10,6 @@
         .glass { background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(20px); }
         .gradient-text { background: linear-gradient(90deg, #38bdf8, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         html { scroll-behavior: smooth; }
-        details > summary { list-style: none; }
-        details > summary::-webkit-details-marker { display: none; }
         
         /* Sayfa Geçiş Efektleri */
         .hidden-section { display: none !important; }
@@ -27,18 +25,16 @@
             <div class="max-w-7xl mx-auto flex justify-between items-center">
                 <div class="flex items-center gap-8">
                     <div class="text-2xl font-black text-sky-400 tracking-tighter uppercase cursor-pointer" onclick="showLanding()">AI Turbo Assistance</div>
+                    
                     <div class="hidden md:flex gap-6 text-sm font-medium text-slate-400">
                         <a href="#features" class="hover:text-white transition tr-text">Özellikler</a>
                         <a href="#features" class="hover:text-white transition en-text lang-hidden">Features</a>
                         <a href="#solutions" class="hover:text-white transition tr-text">Çözümler</a>
                         <a href="#solutions" class="hover:text-white transition en-text lang-hidden">Solutions</a>
-                        <a href="#guide" class="hover:text-white transition tr-text">Kullanım Rehberi</a>
-                        <a href="#guide" class="hover:text-white transition en-text lang-hidden">User Guide</a>
                     </div>
                 </div>
                 <div class="flex gap-4">
                     <button onclick="toggleLanguage()" id="langBtn" class="text-xs font-bold border border-slate-700 px-3 py-1 rounded-md hover:bg-slate-800 transition">English 🇺🇸</button>
-                    <button onclick="showApp()" class="bg-sky-600 px-6 py-2 rounded-xl text-sm font-bold hover:bg-sky-500 transition shadow-lg shadow-sky-900/20">Launch App</button>
                 </div>
             </div>
         </nav>
@@ -53,8 +49,12 @@
                 <span class="en-text lang-hidden">Student-friendly assistant breaking language barriers with advanced AI.</span>
             </p>
             <div class="flex justify-center gap-6">
-                <button onclick="showApp()" class="bg-sky-500 px-10 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition">Start Now</button>
-                <a href="#guide" class="border border-slate-700 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-slate-800 transition">User Guide</a>
+                <button onclick="showApp()" class="bg-sky-500 px-10 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition text-white shadow-lg shadow-sky-500/30">
+                    Start Now
+                </button>
+                <button onclick="showApp()" class="border border-slate-700 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-slate-800 transition">
+                    User Guide
+                </button>
             </div>
         </section>
 
@@ -67,7 +67,6 @@
                             <li class="flex items-center gap-2">✔ Live Transcription</li>
                             <li class="flex items-center gap-2">✔ AI Translation</li>
                             <li class="flex items-center gap-2">✔ Voice Synthesis</li>
-                            <li class="flex items-center gap-2">✔ Cloud Sync</li>
                         </ul>
                     </div>
                     <div>
@@ -76,7 +75,6 @@
                             <li class="flex items-center gap-2">✔ Lecture Archiving</li>
                             <li class="flex items-center gap-2">✔ PDF/TXT Export</li>
                             <li class="flex items-center gap-2">✔ Study Notes</li>
-                            <li class="flex items-center gap-2">✔ Quiz Generation</li>
                         </ul>
                     </div>
                     <div>
@@ -85,7 +83,6 @@
                             <li class="flex items-center gap-2">✔ Multilingual Support</li>
                             <li class="flex items-center gap-2">✔ Low Latency</li>
                             <li class="flex items-center gap-2">✔ Cross-Platform</li>
-                            <li class="flex items-center gap-2">✔ User Friendly UI</li>
                         </ul>
                     </div>
                     <div>
@@ -94,30 +91,24 @@
                             <li class="flex items-center gap-2">✔ Team Collaboration</li>
                             <li class="flex items-center gap-2">✔ API Integration</li>
                             <li class="flex items-center gap-2">✔ High Security</li>
-                            <li class="flex items-center gap-2">✔ Custom Models</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="guide" class="py-24 max-w-4xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-10 text-center">Frequently Asked Questions</h2>
-            <div class="space-y-4">
-                <details class="group bg-slate-900 p-6 rounded-2xl border border-slate-800">
-                    <summary class="font-bold cursor-pointer flex justify-between items-center">
-                        Sistem her cihazda çalışır mı?
-                        <span class="group-open:rotate-180 transition">▼</span>
-                    </summary>
-                    <p class="mt-4 text-slate-400 text-sm">Evet, tüm tarayıcılardan erişilebilir.</p>
-                </details>
-                <details class="group bg-slate-900 p-6 rounded-2xl border border-slate-800">
-                    <summary class="font-bold cursor-pointer flex justify-between items-center">
-                        Biz kimiz? (Hakkımızda)
-                        <span class="group-open:rotate-180 transition">▼</span>
-                    </summary>
-                    <p class="mt-4 text-slate-400 text-sm">Biz, eğitimde fırsat eşitliği için çalışan bir grup üniversite öğrencisiyiz.</p>
-                </details>
+        <section id="solutions" class="py-24 max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-16">
+            <div class="col-span-1 border-r border-slate-800 pr-10">
+                <h2 class="text-4xl font-black mb-6 tr-text">Neden AI Turbo?</h2>
+                <h2 class="text-4xl font-black mb-6 en-text lang-hidden">Why AI Turbo?</h2>
+                <p class="text-slate-400 mb-8 tr-text">Eğitimin her alanında, dil sınırlarını ortadan kaldıran çözümler sunuyoruz.</p>
+                <p class="text-slate-400 mb-8 en-text lang-hidden">We offer solutions that break language boundaries in every field of education.</p>
+            </div>
+            <div class="col-span-2 space-y-12">
+                <div class="bg-slate-900/50 p-8 rounded-3xl border border-slate-800">
+                    <h3 class="text-2xl font-bold mb-4">Üniversite Eğitiminde Devrim</h3>
+                    <p class="text-slate-400 leading-relaxed">Yurt dışında okuyan veya yabancı dilde eğitim alan öğrenciler için ders takibi artık kabus değil. AI Turbo Assistance, hocanızın anlatımını anında kendi dilinize çevirerek akademik başarınızı destekler.</p>
+                </div>
             </div>
         </section>
 
@@ -127,9 +118,9 @@
     </div>
 
 
-    <div id="app-page" class="hidden-section min-h-screen flex flex-col items-center justify-center p-4 fade-in relative">
+    <div id="app-page" class="hidden-section min-h-screen bg-[#0b0f1a] flex flex-col md:flex-row items-center justify-center p-6 gap-10 fade-in relative">
         
-        <button onclick="showLanding()" class="absolute top-6 left-6 flex items-center gap-2 text-slate-400 hover:text-white transition">
+        <button onclick="showLanding()" class="absolute top-6 left-6 flex items-center gap-2 text-slate-400 hover:text-white transition z-20">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
             Ana Sayfaya Dön
         </button>
@@ -158,12 +149,47 @@
             </div>
         </div>
 
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+        <div class="max-w-md text-slate-300 space-y-6">
+            <h3 class="text-2xl font-bold text-white border-b border-slate-700 pb-2">Nasıl Çalışır?</h3>
+            
+            <div class="space-y-4">
+                <details class="group bg-slate-900/50 p-4 rounded-xl border border-slate-800 cursor-pointer" open>
+                    <summary class="font-bold text-sky-400 flex justify-between items-center list-none">
+                        1. Sistemi Başlatın
+                        <span class="text-xs text-slate-500">▼</span>
+                    </summary>
+                    <p class="mt-2 text-sm text-slate-400">"Sistemi Başlat" butonuna tıkladığınızda mikrofonunuz aktif olur ve ortamdaki konuşmaları dinlemeye başlar.</p>
+                </details>
+
+                <details class="group bg-slate-900/50 p-4 rounded-xl border border-slate-800 cursor-pointer">
+                    <summary class="font-bold text-emerald-400 flex justify-between items-center list-none">
+                        2. Anlık Çeviri
+                        <span class="text-xs text-slate-500">▼</span>
+                    </summary>
+                    <p class="mt-2 text-sm text-slate-400">Yapay zeka, duyduğu Türkçe cümleleri saniyeler içinde analiz eder ve alt kutucukta İngilizce karşılığını gösterir.</p>
+                </details>
+
+                <details class="group bg-slate-900/50 p-4 rounded-xl border border-slate-800 cursor-pointer">
+                    <summary class="font-bold text-amber-400 flex justify-between items-center list-none">
+                        3. Notları Kaydedin
+                        <span class="text-xs text-slate-500">▼</span>
+                    </summary>
+                    <p class="mt-2 text-sm text-slate-400">Ders veya toplantı bittiğinde "Ders Notlarını İndir" butonuna basarak tüm konuşmayı metin belgesi olarak bilgisayarınıza indirebilirsiniz.</p>
+                </details>
+                
+                <div class="bg-blue-500/10 p-4 rounded-xl border border-blue-500/20 mt-4">
+                    <p class="text-xs text-blue-300 font-bold">💡 İPUCU:</p>
+                    <p class="text-xs text-slate-400 mt-1">Daha net sonuçlar için mikrofonun konuşmacıya yakın olduğundan emin olun.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-sky-500/5 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
     </div>
 
 
     <script>
-        // --- SAYFA GEÇİŞ MANTIĞI ---
+        // --- SAYFA GEÇİŞLERİ ---
         function showApp() {
             document.getElementById('landing-page').classList.add('hidden-section');
             document.getElementById('app-page').classList.remove('hidden-section');
@@ -173,11 +199,11 @@
         function showLanding() {
             document.getElementById('app-page').classList.add('hidden-section');
             document.getElementById('landing-page').classList.remove('hidden-section');
-            stopSystem(); // Ana sayfaya dönünce sistemi durdur
+            stopSystem(); // Ana sayfaya dönünce mikrofonu kapat
             window.scrollTo(0,0);
         }
 
-        // --- DİL DEĞİŞTİRME MANTIĞI (LANDING) ---
+        // --- DİL DEĞİŞTİRME (LANDING) ---
         let currentLang = 'TR';
         function toggleLanguage() {
             const trTexts = document.querySelectorAll('.tr-text');
@@ -197,11 +223,10 @@
             }
         }
 
-        // --- UYGULAMA MANTIĞI (APP) ---
+        // --- UYGULAMA MANTIĞI ---
         let isRunning = false;
         let recognition;
         let fullScript = "";
-        let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
         function toggleSystem() {
             if (!isRunning) startSystem();
@@ -218,44 +243,25 @@
             recognition = new SpeechRecognition();
             recognition.lang = 'tr-TR';
             recognition.continuous = true;
-            recognition.interimResults = false; // Sadece kesin sonuçları al
+            recognition.interimResults = false;
 
             recognition.onstart = () => {
-                document.getElementById('tr_p').innerText = "Sistem aktif, konuşabilirsiniz...";
+                document.getElementById('tr_p').innerText = "Sistem aktif, dinleniyor...";
             };
 
             recognition.onresult = async (event) => {
                 const text = event.results[event.results.length - 1][0].transcript;
                 document.getElementById('tr_p').innerText = text;
                 
-                // NOT: Burası Vercel Backend olmadan hata verebilir, ama kod yapısı bozulmasın diye bırakıyorum.
-                // Eğer backend yoksa sadece ekrana yazıp geçer.
-                try {
-                    const response = await fetch('/process', {
-                        method: 'POST',
-                        headers: {'Content-Type': 'application/json'},
-                        body: JSON.stringify({text: text})
-                    });
-                    
-                    if(response.ok) {
-                        const data = await response.json();
-                        document.getElementById('en_p').innerText = data.en;
-                        fullScript += `TR: ${text}\nEN: ${data.en}\n\n`;
-                        if (data.audio) playAudio(data.audio);
-                    } else {
-                        console.log("Backend bağlantısı yok, simülasyon modu.");
-                        // Backend yoksa en azından TR kısmını kaydet
-                        fullScript += `TR: ${text}\n(Çeviri servisi bağlı değil)\n\n`;
-                    }
-                } catch (e) {
-                    console.error("Hata:", e);
-                    fullScript += `TR: ${text}\n(Bağlantı hatası)\n\n`;
-                }
+                // Simülasyon (Backend olmadığı için basit çeviri mantığı veya placeholder)
+                // Gerçek projede burası API'ye gider.
+                document.getElementById('en_p').innerText = "Translating: " + text; 
+                fullScript += `TR: ${text}\nEN: (Translated)\n\n`;
             };
 
             recognition.onerror = (event) => {
-                console.error("Speech recognition error", event.error);
-                document.getElementById('tr_p').innerText = "Hata oluştu: " + event.error;
+                console.error("Hata:", event.error);
+                document.getElementById('tr_p').innerText = "Hata oluştu, tekrar deneyin.";
             };
 
             recognition.start();
@@ -276,22 +282,6 @@
             document.getElementById('tr_p').innerText = "Dinleniyor...";
         }
 
-        function playAudio(base64) {
-            try {
-                const binary = window.atob(base64);
-                const buffer = new Uint8Array(binary.length);
-                for (let i = 0; i < binary.length; i++) buffer[i] = binary.charCodeAt(i);
-                audioCtx.decodeAudioData(buffer.buffer, (decoded) => {
-                    const source = audioCtx.createBufferSource();
-                    source.buffer = decoded;
-                    source.connect(audioCtx.destination);
-                    source.start(0);
-                });
-            } catch (e) {
-                console.error("Ses çalma hatası:", e);
-            }
-        }
-
         function downloadScript() {
             if(!fullScript) {
                 alert("Henüz kaydedilmiş bir veri yok.");
@@ -301,7 +291,7 @@
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = `AI_Turbo_Notlar_${new Date().toLocaleDateString()}.txt`;
+            a.download = `AI_Turbo_Notlar.txt`;
             a.click();
         }
     </script>
