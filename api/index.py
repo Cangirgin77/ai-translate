@@ -3,38 +3,33 @@ from flask import Flask, render_template, request, jsonify
 from googletrans import Translator
 from gtts import gTTS
 
-# Vercel'de çalışması için template klasörünü dışarıda aramasını söylüyoruz
+# Vercel'in template klasörünü bulması için yol ayarı
 app = Flask(__name__, template_folder='../templates')
 translator = Translator()
 
-# 1. LANDING PAGE (Tanıtım Sayfası)
 @app.route('/')
 def landing():
     return render_template('landing.html')
 
-# 2. UYGULAMA PANELİ (Çeviri Paneli)
 @app.route('/app')
 def main_app():
     return render_template('index.html')
 
-# 3. ÇEVİRİ VE SES ÜRETİM MOTORU
-# Not: Vercel "serverless" çalıştığı için mikrofonu sunucuda değil, 
-# senin bilgisayarında çalıştırıp metni buraya göndereceğiz.
 @app.route('/process', methods=['POST'])
 def process():
     try:
         data = request.json
         tr_text = data.get('text')
         
-        if not tr_text:
+        if not tr_text or len(tr_text.strip()) < 1:
             return jsonify({"error": "Metin yok"}), 400
 
-        # Bağlamı koruyarak çevir
+        # Çeviri işlemi
         en_text = translator.translate(tr_text, dest='en').text
         
-        # Sesi üret
-        filename = f"audio.mp3"
+        # Sesi üret (Bellekte saklamadan base64'e çeviriyoruz)
         tts = gTTS(text=en_text, lang='en', slow=False)
+        filename = f"voice_{int(time.time())}.mp3"
         tts.save(filename)
 
         with open(filename, "rb") as f:
@@ -50,9 +45,6 @@ def process():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# Vercel için gerekli
+# Vercel için gerekli handler
 def handler(request):
     return app(request)
-
-if __name__ == '__main__':
-    app.run(port=5002)
