@@ -35,6 +35,9 @@
 
                         <a href="#guide" class="hover:text-white transition tr-text">Kullanım Rehberi</a>
                         <a href="#guide" class="hover:text-white transition en-text lang-hidden">User Guide</a>
+                        
+                        <a href="#contact" class="hover:text-white transition tr-text">İletişim</a>
+                        <a href="#contact" class="hover:text-white transition en-text lang-hidden">Contact</a>
                     </div>
                 </div>
                 <div class="flex gap-4">
@@ -43,7 +46,9 @@
             </div>
         </nav>
 
-        <section class="py-32 px-6 text-center">
+        <section class="py-32 px-6 text-center relative overflow-hidden">
+             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-500/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+
             <h1 class="text-6xl md:text-8xl font-black mb-8 leading-none">
                 <span class="tr-text italic">Akıllı Çeviri, <br><span class="gradient-text">Kesintisiz Eğitim.</span></span>
                 <span class="en-text lang-hidden italic">Smart Translation, <br><span class="gradient-text">Seamless Learning.</span></span>
@@ -62,59 +67,86 @@
             </div>
         </section>
 
-        <section id="features" class="py-24 bg-slate-900/30 border-y border-slate-800">
+        <section id="features" class="py-24 bg-[#0b0f1a]">
             <div class="max-w-7xl mx-auto px-6">
-                <div class="grid md:grid-cols-4 gap-8">
-                    <div>
-                        <h4 class="text-sky-400 font-bold mb-6 border-b border-sky-400/20 pb-2 uppercase tracking-widest text-xs">Core Features</h4>
-                        <ul class="space-y-4 text-slate-300">
-                            <li class="flex items-center gap-2">✔ Live Transcription</li>
-                            <li class="flex items-center gap-2">✔ AI Translation</li>
-                            <li class="flex items-center gap-2">✔ Voice Synthesis</li>
-                        </ul>
+                <div class="flex justify-center gap-8 mb-16 text-sm font-bold tracking-widest text-slate-500">
+                    <div class="flex flex-col items-center"><span class="text-sky-400 text-2xl mb-1">01</span> DREAM</div>
+                    <div class="flex flex-col items-center"><span class="text-emerald-400 text-2xl mb-1">02</span> CODE</div>
+                    <div class="flex flex-col items-center"><span class="text-amber-400 text-2xl mb-1">03</span> IMPACT</div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-[#111827] p-8 rounded-[2rem] border border-slate-800 hover:border-sky-500/50 transition duration-300 group">
+                        <div class="w-12 h-12 bg-sky-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-sky-400"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="23"/><line x1="8" x2="16" y1="23" y2="23"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 tr-text">Instant Capture</h3>
+                        <h3 class="text-xl font-bold mb-3 en-text lang-hidden">Instant Capture</h3>
+                        <p class="text-slate-400 leading-relaxed tr-text">Hocanızın sesini yüksek doğrulukla analiz eder ve anında yazıya döker.</p>
+                        <p class="text-slate-400 leading-relaxed en-text lang-hidden">Analyzes your professor's voice with high accuracy and transcribes instantly.</p>
                     </div>
-                    <div>
-                        <h4 class="text-emerald-400 font-bold mb-6 border-b border-emerald-400/20 pb-2 uppercase tracking-widest text-xs">Education</h4>
-                        <ul class="space-y-4 text-slate-300">
-                            <li class="flex items-center gap-2">✔ Lecture Archiving</li>
-                            <li class="flex items-center gap-2">✔ PDF/TXT Export</li>
-                            <li class="flex items-center gap-2">✔ Study Notes</li>
-                        </ul>
+
+                    <div class="bg-[#111827] p-8 rounded-[2rem] border border-slate-800 hover:border-emerald-500/50 transition duration-300 group">
+                        <div class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-400"><path d="m5 8 5 5 5-5"/><circle cx="12" cy="12" r="10"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 tr-text">Contextual Translation</h3>
+                        <h3 class="text-xl font-bold mb-3 en-text lang-hidden">Contextual Translation</h3>
+                        <p class="text-slate-400 leading-relaxed tr-text">Sadece kelimeleri değil, dersin ruhunu ve bağlamını çevirir.</p>
+                        <p class="text-slate-400 leading-relaxed en-text lang-hidden">Translates not just words, but the spirit and context of the lecture.</p>
                     </div>
-                    <div>
-                        <h4 class="text-amber-400 font-bold mb-6 border-b border-amber-400/20 pb-2 uppercase tracking-widest text-xs">Accessibility</h4>
-                        <ul class="space-y-4 text-slate-300">
-                            <li class="flex items-center gap-2">✔ Multilingual Support</li>
-                            <li class="flex items-center gap-2">✔ Low Latency</li>
-                            <li class="flex items-center gap-2">✔ Cross-Platform</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-purple-400 font-bold mb-6 border-b border-purple-400/20 pb-2 uppercase tracking-widest text-xs">Enterprise</h4>
-                        <ul class="space-y-4 text-slate-300">
-                            <li class="flex items-center gap-2">✔ Team Collaboration</li>
-                            <li class="flex items-center gap-2">✔ API Integration</li>
-                            <li class="flex items-center gap-2">✔ High Security</li>
-                        </ul>
+
+                    <div class="bg-[#111827] p-8 rounded-[2rem] border border-slate-800 hover:border-amber-500/50 transition duration-300 group">
+                        <div class="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"/><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 tr-text">Smart Archive</h3>
+                        <h3 class="text-xl font-bold mb-3 en-text lang-hidden">Smart Archive</h3>
+                        <p class="text-slate-400 leading-relaxed tr-text">Ders notlarını saniyeler içinde düzenlenmiş formatta telefonunuza indirir.</p>
+                        <p class="text-slate-400 leading-relaxed en-text lang-hidden">Downloads lecture notes to your phone in an organized format in seconds.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="solutions" class="py-24 max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-16">
-            <div class="col-span-1 border-r border-slate-800 pr-10">
-                <h2 class="text-4xl font-black mb-6 tr-text">Neden AI Turbo?</h2>
-                <h2 class="text-4xl font-black mb-6 en-text lang-hidden">Why AI Turbo?</h2>
-                <p class="text-slate-400 mb-8 tr-text">Eğitimin her alanında, dil sınırlarını ortadan kaldıran çözümler sunuyoruz.</p>
-                <p class="text-slate-400 mb-8 en-text lang-hidden">We offer solutions that break language boundaries in every field of education.</p>
-            </div>
-            <div class="col-span-2 space-y-12">
-                <div class="bg-slate-900/50 p-8 rounded-3xl border border-slate-800">
-                    <h3 class="text-2xl font-bold mb-4 tr-text">Üniversite Eğitiminde Devrim</h3>
-                    <h3 class="text-2xl font-bold mb-4 en-text lang-hidden">Revolution in University Education</h3>
-                    
-                    <p class="text-slate-400 leading-relaxed tr-text">Yurt dışında okuyan veya yabancı dilde eğitim alan öğrenciler için ders takibi artık kabus değil. AI Turbo Assistance, hocanızın anlatımını anında kendi dilinize çevirerek akademik başarınızı destekler.</p>
-                    <p class="text-slate-400 leading-relaxed en-text lang-hidden">Following lectures is no longer a nightmare for students studying abroad. AI Turbo Assistance instantly translates your professor's speech into your language, supporting your academic success.</p>
+        <section id="solutions" class="py-24 max-w-7xl mx-auto px-6 border-y border-slate-800">
+             <div class="grid md:grid-cols-3 gap-16">
+                <div class="col-span-1 border-r border-slate-800 pr-10">
+                    <h2 class="text-4xl font-black mb-6 tr-text">Neden AI Turbo?</h2>
+                    <h2 class="text-4xl font-black mb-6 en-text lang-hidden">Why AI Turbo?</h2>
+                    <p class="text-slate-400 mb-8 tr-text">Eğitimin her alanında, dil sınırlarını ortadan kaldıran çözümler sunuyoruz.</p>
+                    <p class="text-slate-400 mb-8 en-text lang-hidden">We offer solutions that break language boundaries in every field of education.</p>
+                </div>
+                <div class="col-span-2 space-y-12">
+                    <div class="bg-slate-900/50 p-8 rounded-3xl border border-slate-800">
+                        <h3 class="text-2xl font-bold mb-4 tr-text">Üniversite Eğitiminde Devrim</h3>
+                        <h3 class="text-2xl font-bold mb-4 en-text lang-hidden">Revolution in University Education</h3>
+                        <p class="text-slate-400 leading-relaxed tr-text">Yurt dışında okuyan veya yabancı dilde eğitim alan öğrenciler için ders takibi artık kabus değil. AI Turbo Assistance, hocanızın anlatımını anında kendi dilinize çevirerek akademik başarınızı destekler.</p>
+                        <p class="text-slate-400 leading-relaxed en-text lang-hidden">Following lectures is no longer a nightmare for students studying abroad. AI Turbo Assistance instantly translates your professor's speech into your language, supporting your academic success.</p>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+        <section class="py-24 bg-slate-900/30">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h2 class="text-3xl font-black mb-8 tr-text">Biz Kimiz?</h2>
+                <h2 class="text-3xl font-black mb-8 en-text lang-hidden">Who Are We?</h2>
+                
+                <p class="text-xl text-slate-300 leading-relaxed mb-8 tr-text">
+                    Biz, dil engelinin akademik başarıya engel olmamasını dert edinen bir grup üniversite öğrencisiyiz. 
+                    Kendi yaşadığımız zorluklardan yola çıkarak, eğitimde fırsat eşitliği sağlamak amacıyla 
+                    bu yapay zeka asistanını geliştirdik.
+                </p>
+                <p class="text-xl text-slate-300 leading-relaxed mb-8 en-text lang-hidden">
+                    We are a group of university students concerned that language barriers should not hinder academic success. 
+                    Based on the difficulties we experienced, we developed this AI assistant to ensure equal opportunity in education.
+                </p>
+                
+                <div class="flex justify-center gap-4">
+                    <span class="px-4 py-2 bg-slate-800 rounded-full text-xs font-bold text-slate-400 border border-slate-700">🚀 Öğrenci Projesi</span>
+                    <span class="px-4 py-2 bg-slate-800 rounded-full text-xs font-bold text-slate-400 border border-slate-700">🎓 %100 Yerli</span>
+                    <span class="px-4 py-2 bg-slate-800 rounded-full text-xs font-bold text-slate-400 border border-slate-700">🌍 Global Vizyon</span>
                 </div>
             </div>
         </section>
@@ -134,13 +166,27 @@
                 </details>
                 <details class="group bg-slate-900 p-6 rounded-2xl border border-slate-800">
                     <summary class="font-bold cursor-pointer flex justify-between items-center">
-                        <span class="tr-text">Biz kimiz? (Hakkımızda)</span>
-                        <span class="en-text lang-hidden">Who are we? (About Us)</span>
+                        <span class="tr-text">Ücretli mi?</span>
+                        <span class="en-text lang-hidden">Is it paid?</span>
                         <span class="group-open:rotate-180 transition">▼</span>
                     </summary>
-                    <p class="mt-4 text-slate-400 text-sm tr-text">Biz, eğitimde fırsat eşitliği için çalışan bir grup üniversite öğrencisiyiz.</p>
-                    <p class="mt-4 text-slate-400 text-sm en-text lang-hidden">We are a group of university students working for equal opportunity in education.</p>
+                    <p class="mt-4 text-slate-400 text-sm tr-text">Şu an için tüm öğrencilerimize ücretsiz hizmet vermekteyiz.</p>
+                    <p class="mt-4 text-slate-400 text-sm en-text lang-hidden">We currently provide free service to all our students.</p>
                 </details>
+            </div>
+        </section>
+
+        <section id="contact" class="py-32 bg-gradient-to-t from-sky-900/20 to-transparent text-center border-t border-slate-900">
+            <h2 class="text-6xl font-black italic mb-6 tr-text">Teşekkürler</h2>
+            <h2 class="text-6xl font-black italic mb-6 en-text lang-hidden">Thank You</h2>
+            
+            <p class="text-slate-400 mb-12 max-w-xl mx-auto tr-text">Geleceğin eğitim teknolojilerini desteklediğiniz için teşekkür ederiz.</p>
+            <p class="text-slate-400 mb-12 max-w-xl mx-auto en-text lang-hidden">Thank you for supporting the educational technologies of the future.</p>
+            
+            <div class="bg-slate-900 p-10 rounded-[3rem] border border-slate-800 inline-block shadow-2xl hover:border-sky-500/50 transition">
+                <p class="uppercase tracking-widest text-xs font-bold text-sky-400 mb-2 tr-text">Bize Ulaşın</p>
+                <p class="uppercase tracking-widest text-xs font-bold text-sky-400 mb-2 en-text lang-hidden">Contact Us</p>
+                <a href="mailto:info@aiturbo.com" class="text-3xl font-black hover:text-sky-300 transition">info@aiturbo.com</a>
             </div>
         </section>
 
