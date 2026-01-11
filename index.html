@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Lecture - Revolution in Education</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">AI LECTURE</a> 
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#solutions">Solutions</a>
+                <a href="#guide">User Guide</a> <button class="launch-btn">Launch App</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="video-wrapper">
+            <video autoplay muted loop playsinline class="bg-video">
+                <source src="intro-video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay">
+                <h1>Revolution in University Education</h1>
+                <p>Instantly translate your lectures into your own language.</p>
+            </div>
+        </div>
+    </header>
+
+    <section id="solutions" class="solutions-section">
+        <div class="solutions-left">
+            <h2>Why AI Lecture?</h2>
+            <button class="tab-btn active" onclick="showTab('univ')">Global Universities</button>
+            <button class="tab-btn" onclick="showTab('seminar')">International Seminars</button>
+            <button class="tab-btn" onclick="showTab('language')">Language Schools</button>
+        </div>
+        <div class="solutions-right" id="tab-content">
+            <div class="content-box">
+                <h3 id="tab-title">Revolution in University Education</h3>
+                <p id="tab-text">Following lectures is no longer a nightmare for students studying abroad.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us" class="sticky-section">
+        <h2>Why Choose Us?</h2>
+        <div class="sticky-container">
+            <div class="note yellow" style="transform: rotate(-3deg);">
+                <p>"AI Lecture supports academic success by translating instantly."</p>
+                <span>- Student Review</span>
+            </div>
+            <div class="note purple" style="transform: rotate(2deg);">
+                <p>"The best solution for international seminars and conferences."</p>
+                <span>- Professor X</span>
+            </div>
+            <div class="note orange" style="transform: rotate(-1deg);">
+                <p>"Robust, AI-enhanced translator for every field of education."</p>
+                <span>- Tech Insider</span>
+            </div>
+        </div>
+    </section>
+
+    <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
