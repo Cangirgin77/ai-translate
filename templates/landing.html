@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Turbo Assistance Pro</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .lang-hidden { display: none; }
-        /* Glass Effect güncellendi: Daha belirgin buzlu cam */
+        /* Glass Effect */
         .glass { background: rgba(11, 15, 26, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); }
         .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-size: 200% 200%; animation: gradientMove 5s ease infinite; }
         html { scroll-behavior: smooth; }
@@ -55,7 +57,9 @@
         <nav class="fixed top-0 left-0 w-full z-[100] glass px-6 py-4 transition-all shadow-2xl shadow-sky-900/10">
             <div class="max-w-7xl mx-auto flex justify-between items-center relative">
                 <div class="flex items-center gap-8">
-                    <div class="text-2xl font-black text-sky-400 tracking-tighter uppercase cursor-pointer hover:text-sky-300 transition" onclick="window.scrollTo(0,0)">AI TURBO ASSISTANCE</div>
+                    <div class="text-2xl font-black text-sky-400 tracking-tighter uppercase cursor-pointer hover:text-sky-300 transition" onclick="window.scrollTo(0,0)">
+                        AI TURBO ASSISTANCE
+                    </div>
                     
                     <div class="hidden md:flex gap-6 text-sm font-medium text-slate-400 items-center">
                         
@@ -142,11 +146,11 @@
                         <a href="#solutions" class="hover:text-white transition tr-text">Kullanım Alanları</a>
                         <a href="#solutions" class="hover:text-white transition en-text lang-hidden">Use Cases</a>
 
-                        <a href="#impact" class="hover:text-white transition tr-text">Etki Analizi</a>
-                        <a href="#impact" class="hover:text-white transition en-text lang-hidden">Impact Analysis</a>
-
                         <a href="#how-it-works" class="hover:text-white transition tr-text">Nasıl Çalışır?</a>
                         <a href="#how-it-works" class="hover:text-white transition en-text lang-hidden">How it Works</a>
+
+                        <a href="#impact" class="hover:text-white transition tr-text">Etki Analizi</a>
+                        <a href="#impact" class="hover:text-white transition en-text lang-hidden">Impact Analysis</a>
 
                         <a href="#faq" class="hover:text-white transition tr-text">S.S.S.</a>
                         <a href="#faq" class="hover:text-white transition en-text lang-hidden">FAQ</a>
@@ -210,6 +214,22 @@
             </div>
         </section>
 
+        <section class="py-12 bg-slate-900/50 border-y border-slate-800/50 relative overflow-hidden">
+             <div class="absolute inset-0 bg-grid-slate-800/[0.1] bg-[bottom_1px_center] pointer-events-none" style="mask-image: linear-gradient(to bottom, transparent, black);"></div>
+            <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+                 <p class="text-sm font-bold uppercase tracking-widest text-slate-500 mb-8">
+                    <span class="tr-text">BU DEV MODELLERLE GÜÇLENDİRİLDİ</span>
+                    <span class="en-text lang-hidden">POWERED BY INDUSTRY LEADERS</span>
+                </p>
+                <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-80 grayscale hover:grayscale-0 transition duration-500 cursor-default">
+                    <div class="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400 drop-shadow-sm">Google Gemini</div>
+                    <div class="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500 drop-shadow-sm">OpenAI GPT-4</div>
+                    <div class="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 drop-shadow-sm">Anthropic Claude</div>
+                    <div class="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-red-500 drop-shadow-sm">OpenAI Whisper</div>
+                </div>
+            </div>
+        </section>
+
         <section class="py-24 bg-[#0b0f1a] relative">
             <div class="max-w-7xl mx-auto px-6 relative z-10">
                 <div class="flex justify-center gap-8 mb-16 text-sm font-bold tracking-widest text-slate-500">
@@ -264,44 +284,6 @@
             </div>
         </section>
 
-        <section id="how-it-works" class="py-24 bg-slate-900/50 border-y border-slate-800">
-            <div class="max-w-7xl mx-auto px-6">
-                <h2 class="text-4xl font-black mb-16 text-center tr-text">Sistem Nasıl Çalışır?</h2>
-                <h2 class="text-4xl font-black mb-16 text-center en-text lang-hidden">How It Works?</h2>
-                
-                <div class="grid md:grid-cols-4 gap-8">
-                    <div class="relative">
-                        <div class="text-8xl font-black text-slate-800/50 absolute -top-10 -left-4 -z-10 select-none">01</div>
-                        <h3 class="text-xl font-bold text-sky-400 mb-2 tr-text">Tuşa Bas</h3>
-                        <h3 class="text-xl font-bold text-sky-400 mb-2 en-text lang-hidden">Press Start</h3>
-                        <p class="text-slate-400 text-sm tr-text">"Sistemi Başlat" butonuna tıklayarak mikrofonu aktif hale getir.</p>
-                        <p class="text-slate-400 text-sm en-text lang-hidden">Click "Start System" to activate the microphone.</p>
-                    </div>
-                    <div class="relative">
-                        <div class="text-8xl font-black text-slate-800/50 absolute -top-10 -left-4 -z-10 select-none">02</div>
-                        <h3 class="text-xl font-bold text-emerald-400 mb-2 tr-text">Hoca Konuşsun</h3>
-                        <h3 class="text-xl font-bold text-emerald-400 mb-2 en-text lang-hidden">Listen</h3>
-                        <p class="text-slate-400 text-sm tr-text">Hocanın veya konuşmacının sesini yapay zeka anında algılar.</p>
-                        <p class="text-slate-400 text-sm en-text lang-hidden">AI instantly detects the speaker's voice.</p>
-                    </div>
-                    <div class="relative">
-                        <div class="text-8xl font-black text-slate-800/50 absolute -top-10 -left-4 -z-10 select-none">03</div>
-                        <h3 class="text-xl font-bold text-amber-400 mb-2 tr-text">Anında Çeviri</h3>
-                        <h3 class="text-xl font-bold text-amber-400 mb-2 en-text lang-hidden">Translate</h3>
-                        <p class="text-slate-400 text-sm tr-text">Söylenenler anında kendi diline çevrilir ve kulağına sesli olarak gelir.</p>
-                        <p class="text-slate-400 text-sm en-text lang-hidden">Speech is translated instantly and played back in your ear.</p>
-                    </div>
-                    <div class="relative">
-                        <div class="text-8xl font-black text-slate-800/50 absolute -top-10 -left-4 -z-10 select-none">04</div>
-                        <h3 class="text-xl font-bold text-purple-400 mb-2 tr-text">Kaydet & İndir</h3>
-                        <h3 class="text-xl font-bold text-purple-400 mb-2 en-text lang-hidden">Download</h3>
-                        <p class="text-slate-400 text-sm tr-text">Ders bitiminde tüm çeviriyi metin dosyası (TXT) olarak indir.</p>
-                        <p class="text-slate-400 text-sm en-text lang-hidden">Download the full translation as a text file (TXT) at the end.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="solutions" class="py-24 max-w-7xl mx-auto px-6">
             <h2 class="text-4xl font-black mb-12 text-center tr-text">Hangi Alanlarda Kullanılır?</h2>
             <h2 class="text-4xl font-black mb-12 text-center en-text lang-hidden">Use Cases</h2>
@@ -344,6 +326,44 @@
                         <h3 class="text-xl font-bold mb-2 en-text lang-hidden">Language Learning</h3>
                         <p class="text-slate-400 text-sm tr-text">Orijinal konuşma ile çeviriyi kıyaslayarak dil pratiği yap.</p>
                         <p class="text-slate-400 text-sm en-text lang-hidden">Practice language by comparing original speech with translation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="py-24 bg-slate-900/50 border-y border-slate-800">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-4xl font-black mb-16 text-center tr-text">Sistem Nasıl Çalışır?</h2>
+                <h2 class="text-4xl font-black mb-16 text-center en-text lang-hidden">How It Works?</h2>
+                
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="relative">
+                        <div class="text-8xl font-black text-slate-800/50 absolute -top-10 -left-4 -z-10 select-none">01</div>
+                        <h3 class="text-xl font-bold text-sky-400 mb-2 tr-text">Tuşa Bas</h3>
+                        <h3 class="text-xl font-bold text-sky-400 mb-2 en-text lang-hidden">Press Start</h3>
+                        <p class="text-slate-400 text-sm tr-text">"Sistemi Başlat" butonuna tıklayarak mikrofonu aktif hale getir.</p>
+                        <p class="text-slate-400 text-sm en-text lang-hidden">Click "Start System" to activate the microphone.</p>
+                    </div>
+                    <div class="relative">
+                        <div class="text-8xl font-black text-slate-800/50 absolute -top-10 -left-4 -z-10 select-none">02</div>
+                        <h3 class="text-xl font-bold text-emerald-400 mb-2 tr-text">Hoca Konuşsun</h3>
+                        <h3 class="text-xl font-bold text-emerald-400 mb-2 en-text lang-hidden">Listen</h3>
+                        <p class="text-slate-400 text-sm tr-text">Hocanın veya konuşmacının sesini yapay zeka anında algılar.</p>
+                        <p class="text-slate-400 text-sm en-text lang-hidden">AI instantly detects the speaker's voice.</p>
+                    </div>
+                    <div class="relative">
+                        <div class="text-8xl font-black text-slate-800/50 absolute -top-10 -left-4 -z-10 select-none">03</div>
+                        <h3 class="text-xl font-bold text-amber-400 mb-2 tr-text">Anında Çeviri</h3>
+                        <h3 class="text-xl font-bold text-amber-400 mb-2 en-text lang-hidden">Translate</h3>
+                        <p class="text-slate-400 text-sm tr-text">Söylenenler anında kendi diline çevrilir ve kulağına sesli olarak gelir.</p>
+                        <p class="text-slate-400 text-sm en-text lang-hidden">Speech is translated instantly and played back in your ear.</p>
+                    </div>
+                    <div class="relative">
+                        <div class="text-8xl font-black text-slate-800/50 absolute -top-10 -left-4 -z-10 select-none">04</div>
+                        <h3 class="text-xl font-bold text-purple-400 mb-2 tr-text">Kaydet & İndir</h3>
+                        <h3 class="text-xl font-bold text-purple-400 mb-2 en-text lang-hidden">Download</h3>
+                        <p class="text-slate-400 text-sm tr-text">Ders bitiminde tüm çeviriyi metin dosyası (TXT) olarak indir.</p>
+                        <p class="text-slate-400 text-sm en-text lang-hidden">Download the full translation as a text file (TXT) at the end.</p>
                     </div>
                 </div>
             </div>
@@ -411,7 +431,7 @@
                             <div class="space-y-6 text-slate-400 leading-relaxed">
                                 <p>
                                     <strong class="text-white">Why 85% Barrier?</strong><br>
-                                    According to educational research, one needs to know <strong>95-98%</strong> of the vocabulary (Lexical Coverage) to fully comprehend an academic lecture. When listening in a foreign language, the brain suffers from <strong>"Cognitive Overload"</strong>, resulting in an 85% loss of information.
+                                    According to educational research, one needs to know <strong>95-98%</strong> of the vocabulary to fully comprehend an academic lecture. When listening in a foreign language, the brain suffers from <strong>"Cognitive Overload"</strong>, resulting in an 85% loss of information.
                                 </p>
                                 <p>
                                     <strong class="text-white">How it Drops to 5%?</strong><br>
@@ -441,6 +461,34 @@
                     We are a group of university students concerned that language barriers should not hinder academic success. 
                     Based on the difficulties we experienced, we developed this AI assistant to ensure equal opportunity in education.
                 </p>
+            </div>
+        </section>
+
+        <section class="py-24 bg-[#080c14] relative overflow-hidden">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-900/20 rounded-full blur-[150px] -z-10 pointer-events-none"></div>
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="grid md:grid-cols-4 gap-8 text-center divided-y md:divide-y-0 md:divide-x divide-slate-800">
+                    <div class="p-4">
+                        <div class="text-4xl md:text-5xl font-black text-sky-400 mb-2">15K+</div>
+                        <div class="text-sm uppercase tracking-widest font-bold text-slate-500 tr-text">Aktif Kullanıcı</div>
+                        <div class="text-sm uppercase tracking-widest font-bold text-slate-500 en-text lang-hidden">Active Users</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-4xl md:text-5xl font-black text-emerald-400 mb-2">%98</div>
+                        <div class="text-sm uppercase tracking-widest font-bold text-slate-500 tr-text">Çeviri Doğruluğu</div>
+                        <div class="text-sm uppercase tracking-widest font-bold text-slate-500 en-text lang-hidden">Translation Accuracy</div>
+                    </div>
+                     <div class="p-4">
+                        <div class="text-4xl md:text-5xl font-black text-amber-400 mb-2">40+</div>
+                        <div class="text-sm uppercase tracking-widest font-bold text-slate-500 tr-text">Ülke & Üniversite</div>
+                        <div class="text-sm uppercase tracking-widest font-bold text-slate-500 en-text lang-hidden">Countries Served</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-4xl md:text-5xl font-black text-purple-400 mb-2">24/7</div>
+                        <div class="text-sm uppercase tracking-widest font-bold text-slate-500 tr-text">Kesintisiz Erişim</div>
+                        <div class="text-sm uppercase tracking-widest font-bold text-slate-500 en-text lang-hidden">Uptime Guarantee</div>
+                    </div>
+                </div>
             </div>
         </section>
 
