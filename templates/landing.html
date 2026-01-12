@@ -7,14 +7,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .lang-hidden { display: none; }
-        .glass { background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(20px); }
-        .gradient-text { background: linear-gradient(90deg, #38bdf8, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-size: 200% 200%; animation: gradientMove 5s ease infinite; }
         html { scroll-behavior: smooth; }
         
         /* Sayfa Geçiş Efektleri */
         .hidden-section { display: none !important; }
         .fade-in { animation: fadeIn 0.5s ease-in-out; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes gradientMove { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
 
         /* Mega Menü Ayarları */
         .mega-menu {
@@ -35,48 +36,48 @@
         }
     </style>
 </head>
-<body class="bg-[#0b0f1a] text-white font-sans scroll-smooth">
+<body class="bg-[#0b0f1a] text-white font-sans scroll-smooth selection:bg-sky-500/30">
 
-    <div id="landing-page" class="fade-in">
+    <div id="landing-page" class="fade-in relative">
         
-        <nav class="sticky top-0 z-[100] glass border-b border-slate-800 px-6 py-4">
+        <nav class="sticky top-0 z-[100] glass px-6 py-4 transition-all">
             <div class="max-w-7xl mx-auto flex justify-between items-center relative">
                 <div class="flex items-center gap-8">
-                    <div class="text-2xl font-black text-sky-400 tracking-tighter uppercase cursor-pointer" onclick="showLanding()">AI TURBO ASSISTANCE</div>
+                    <div class="text-2xl font-black text-sky-400 tracking-tighter uppercase cursor-pointer hover:text-sky-300 transition" onclick="showLanding()">AI TURBO ASSISTANCE</div>
                     
                     <div class="hidden md:flex gap-6 text-sm font-medium text-slate-400 items-center">
                         
                         <div class="group py-4 relative">
-                            <button class="hover:text-white transition flex items-center gap-1">
+                            <button class="hover:text-white transition flex items-center gap-1 group-hover:text-sky-400">
                                 <span class="tr-text">Özellikler</span>
                                 <span class="en-text lang-hidden">Features</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:rotate-180"><path d="m6 9 6 6 6-6"/></svg>
                             </button>
                             
                             <div class="mega-menu pt-4">
-                                <div class="bg-[#0f172a] border border-slate-700 rounded-2xl shadow-2xl p-8 grid grid-cols-3 gap-8 w-[600px]">
+                                <div class="bg-[#0f172a]/95 backdrop-blur-xl border border-slate-700 rounded-2xl shadow-2xl p-8 grid grid-cols-3 gap-8 w-[600px]">
                                     <div>
                                         <h4 class="text-sky-400 font-bold mb-4 text-xs uppercase tracking-widest">Core AI</h4>
                                         <ul class="space-y-3 text-slate-300">
-                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer"><span class="text-sky-500">⚡</span> Live Translation</li>
-                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer"><span class="text-sky-500">🎙️</span> Voice Synthesis</li>
-                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer"><span class="text-sky-500">🧠</span> Context Aware</li>
+                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer transition"><span class="text-sky-500">⚡</span> Live Translation</li>
+                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer transition"><span class="text-sky-500">🎙️</span> Voice Synthesis</li>
+                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer transition"><span class="text-sky-500">🧠</span> Context Aware</li>
                                         </ul>
                                     </div>
                                     <div>
                                         <h4 class="text-emerald-400 font-bold mb-4 text-xs uppercase tracking-widest">Productivity</h4>
                                         <ul class="space-y-3 text-slate-300">
-                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer"><span class="text-emerald-500">📄</span> PDF Export</li>
-                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer"><span class="text-emerald-500">📝</span> Auto Summarize</li>
-                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer"><span class="text-emerald-500">💾</span> Cloud Save</li>
+                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer transition"><span class="text-emerald-500">📄</span> PDF Export</li>
+                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer transition"><span class="text-emerald-500">📝</span> Auto Summarize</li>
+                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer transition"><span class="text-emerald-500">💾</span> Cloud Save</li>
                                         </ul>
                                     </div>
                                     <div>
                                         <h4 class="text-amber-400 font-bold mb-4 text-xs uppercase tracking-widest">Platform</h4>
                                         <ul class="space-y-3 text-slate-300">
-                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer"><span class="text-amber-500">📱</span> iOS & Android</li>
-                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer"><span class="text-amber-500">💻</span> Web App</li>
-                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer"><span class="text-amber-500">🔒</span> Secure API</li>
+                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer transition"><span class="text-amber-500">📱</span> iOS & Android</li>
+                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer transition"><span class="text-amber-500">💻</span> Web App</li>
+                                            <li class="flex items-center gap-2 hover:text-white cursor-pointer transition"><span class="text-amber-500">🔒</span> Secure API</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -100,34 +101,50 @@
                     </div>
                 </div>
                 <div class="flex gap-4">
-                    <button onclick="toggleLanguage()" id="langBtn" class="text-xs font-bold border border-slate-700 px-3 py-1 rounded-md hover:bg-slate-800 transition">English 🇺🇸</button>
+                    <button onclick="toggleLanguage()" id="langBtn" class="text-xs font-bold border border-slate-700 px-3 py-1 rounded-md hover:bg-slate-800 transition hover:border-sky-500">English 🇺🇸</button>
                 </div>
             </div>
         </nav>
 
-        <section class="py-32 px-6 text-center relative overflow-hidden">
-             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-500/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+        <section class="relative py-32 px-6 text-center overflow-hidden min-h-[85vh] flex flex-col justify-center items-center">
+             
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[128px] -z-10 animate-pulse"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-sky-500/20 rounded-full blur-[128px] -z-10 animate-pulse" style="animation-delay: 2s;"></div>
 
-            <h1 class="text-6xl md:text-8xl font-black mb-8 leading-none">
-                <span class="tr-text italic">Akıllı Çeviri, <br><span class="gradient-text">Kesintisiz Eğitim.</span></span>
-                <span class="en-text lang-hidden italic">Smart Translation, <br><span class="gradient-text">Seamless Learning.</span></span>
-            </h1>
-            <p class="text-slate-400 text-xl max-w-2xl mx-auto mb-12">
-                <span class="tr-text">Gelişmiş yapay zeka ile dil bariyerlerini yıkan öğrenci dostu asistan.</span>
-                <span class="en-text lang-hidden">Student-friendly assistant breaking language barriers with advanced AI.</span>
-            </p>
-            <div class="flex justify-center gap-6">
-                <button onclick="showApp()" class="bg-sky-500 px-10 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition text-white shadow-lg shadow-sky-500/30">
-                    Start Now
-                </button>
-                <a href="#how-it-works" class="border border-slate-700 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-slate-800 transition">
-                    User Guide
-                </a>
+            <div class="relative z-10 max-w-4xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 text-xs font-medium text-sky-400 mb-8 hover:bg-slate-800 transition cursor-default">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+                    </span>
+                    v2.0 Şimdi Yayında
+                </div>
+
+                <h1 class="text-6xl md:text-8xl font-black mb-8 leading-tight tracking-tight">
+                    <span class="tr-text italic">Akıllı Çeviri, <br><span class="gradient-text">Kesintisiz Eğitim.</span></span>
+                    <span class="en-text lang-hidden italic">Smart Translation, <br><span class="gradient-text">Seamless Learning.</span></span>
+                </h1>
+                
+                <p class="text-slate-400 text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+                    <span class="tr-text">Gelişmiş yapay zeka ile dil bariyerlerini yıkan, ders notlarını anında özetleyen öğrenci dostu asistan.</span>
+                    <span class="en-text lang-hidden">Student-friendly assistant breaking language barriers and summarizing lecture notes instantly with advanced AI.</span>
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <button onclick="showApp()" class="bg-sky-500 px-10 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition text-white shadow-[0_0_40px_-10px_rgba(14,165,233,0.5)] border border-sky-400/50">
+                        Start Now
+                    </button>
+                    <a href="#how-it-works" class="group px-10 py-4 rounded-2xl font-bold text-lg border border-slate-700 hover:bg-slate-800 transition flex items-center justify-center gap-2">
+                        User Guide
+                        <span class="group-hover:translate-x-1 transition">→</span>
+                    </a>
+                </div>
             </div>
         </section>
 
-        <section class="py-24 bg-[#0b0f1a]">
-            <div class="max-w-7xl mx-auto px-6">
+        <section class="py-24 bg-[#0b0f1a] relative">
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
                 <div class="flex justify-center gap-8 mb-16 text-sm font-bold tracking-widest text-slate-500">
                     <div class="flex flex-col items-center"><span class="text-sky-400 text-2xl mb-1">01</span> DREAM</div>
                     <div class="flex flex-col items-center"><span class="text-emerald-400 text-2xl mb-1">02</span> CODE</div>
@@ -135,9 +152,9 @@
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-[#111827] p-8 rounded-[2rem] border border-slate-800 hover:border-sky-500/50 transition duration-300 group">
-                        <div class="w-12 h-12 bg-sky-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-sky-400"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="23"/><line x1="8" x2="16" y1="23" y2="23"/></svg>
+                    <div class="bg-[#111827]/50 backdrop-blur-sm p-8 rounded-[2rem] border border-slate-800 hover:border-sky-500/50 transition duration-300 group hover:-translate-y-2">
+                        <div class="w-14 h-14 bg-sky-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition border border-sky-500/20">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-sky-400"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="23"/><line x1="8" x2="16" y1="23" y2="23"/></svg>
                         </div>
                         <h3 class="text-xl font-bold mb-3 tr-text">Anlık Yakalama</h3>
                         <h3 class="text-xl font-bold mb-3 en-text lang-hidden">Instant Capture</h3>
@@ -145,9 +162,9 @@
                         <p class="text-slate-400 leading-relaxed en-text lang-hidden">Analyzes your professor's voice with high accuracy and transcribes instantly.</p>
                     </div>
 
-                    <div class="bg-[#111827] p-8 rounded-[2rem] border border-slate-800 hover:border-emerald-500/50 transition duration-300 group">
-                        <div class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-400"><path d="m5 8 5 5 5-5"/><circle cx="12" cy="12" r="10"/></svg>
+                    <div class="bg-[#111827]/50 backdrop-blur-sm p-8 rounded-[2rem] border border-slate-800 hover:border-emerald-500/50 transition duration-300 group hover:-translate-y-2">
+                        <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition border border-emerald-500/20">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-400"><path d="m5 8 5 5 5-5"/><circle cx="12" cy="12" r="10"/></svg>
                         </div>
                         <h3 class="text-xl font-bold mb-3 tr-text">Bağlamsal Çeviri</h3>
                         <h3 class="text-xl font-bold mb-3 en-text lang-hidden">Contextual Translation</h3>
@@ -155,9 +172,9 @@
                         <p class="text-slate-400 leading-relaxed en-text lang-hidden">Translates not just words, but the spirit and context of the lecture.</p>
                     </div>
 
-                    <div class="bg-[#111827] p-8 rounded-[2rem] border border-slate-800 hover:border-amber-500/50 transition duration-300 group">
-                        <div class="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"/><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"/></svg>
+                    <div class="bg-[#111827]/50 backdrop-blur-sm p-8 rounded-[2rem] border border-slate-800 hover:border-amber-500/50 transition duration-300 group hover:-translate-y-2">
+                        <div class="w-14 h-14 bg-amber-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition border border-amber-500/20">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"/><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"/></svg>
                         </div>
                         <h3 class="text-xl font-bold mb-3 tr-text">Akıllı Arşiv</h3>
                         <h3 class="text-xl font-bold mb-3 en-text lang-hidden">Smart Archive</h3>
@@ -175,28 +192,28 @@
                 
                 <div class="grid md:grid-cols-4 gap-8">
                     <div class="relative">
-                        <div class="text-8xl font-black text-slate-800 absolute -top-10 -left-4 -z-10">01</div>
+                        <div class="text-8xl font-black text-slate-800/50 absolute -top-10 -left-4 -z-10 select-none">01</div>
                         <h3 class="text-xl font-bold text-sky-400 mb-2 tr-text">Tuşa Bas</h3>
                         <h3 class="text-xl font-bold text-sky-400 mb-2 en-text lang-hidden">Press Start</h3>
                         <p class="text-slate-400 text-sm tr-text">"Sistemi Başlat" butonuna tıklayarak mikrofonu aktif hale getir.</p>
                         <p class="text-slate-400 text-sm en-text lang-hidden">Click "Start System" to activate the microphone.</p>
                     </div>
                     <div class="relative">
-                        <div class="text-8xl font-black text-slate-800 absolute -top-10 -left-4 -z-10">02</div>
+                        <div class="text-8xl font-black text-slate-800/50 absolute -top-10 -left-4 -z-10 select-none">02</div>
                         <h3 class="text-xl font-bold text-emerald-400 mb-2 tr-text">Hoca Konuşsun</h3>
                         <h3 class="text-xl font-bold text-emerald-400 mb-2 en-text lang-hidden">Listen</h3>
                         <p class="text-slate-400 text-sm tr-text">Hocanın veya konuşmacının sesini yapay zeka anında algılar.</p>
                         <p class="text-slate-400 text-sm en-text lang-hidden">AI instantly detects the speaker's voice.</p>
                     </div>
                     <div class="relative">
-                        <div class="text-8xl font-black text-slate-800 absolute -top-10 -left-4 -z-10">03</div>
+                        <div class="text-8xl font-black text-slate-800/50 absolute -top-10 -left-4 -z-10 select-none">03</div>
                         <h3 class="text-xl font-bold text-amber-400 mb-2 tr-text">Anında Çeviri</h3>
                         <h3 class="text-xl font-bold text-amber-400 mb-2 en-text lang-hidden">Translate</h3>
                         <p class="text-slate-400 text-sm tr-text">Söylenenler anında kendi diline çevrilir ve kulağına sesli olarak gelir.</p>
                         <p class="text-slate-400 text-sm en-text lang-hidden">Speech is translated instantly and played back in your ear.</p>
                     </div>
                     <div class="relative">
-                        <div class="text-8xl font-black text-slate-800 absolute -top-10 -left-4 -z-10">04</div>
+                        <div class="text-8xl font-black text-slate-800/50 absolute -top-10 -left-4 -z-10 select-none">04</div>
                         <h3 class="text-xl font-bold text-purple-400 mb-2 tr-text">Kaydet & İndir</h3>
                         <h3 class="text-xl font-bold text-purple-400 mb-2 en-text lang-hidden">Download</h3>
                         <p class="text-slate-400 text-sm tr-text">Ders bitiminde tüm çeviriyi metin dosyası (TXT) olarak indir.</p>
@@ -211,7 +228,7 @@
             <h2 class="text-4xl font-black mb-12 text-center en-text lang-hidden">Use Cases</h2>
 
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 flex items-start gap-4">
+                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 flex items-start gap-4 hover:border-sky-500/30 transition">
                     <div class="bg-sky-500/20 p-3 rounded-xl text-sky-400 text-2xl">🎓</div>
                     <div>
                         <h3 class="text-xl font-bold mb-2 tr-text">Erasmus & Yurt Dışı Eğitim</h3>
@@ -221,7 +238,7 @@
                     </div>
                 </div>
                 
-                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 flex items-start gap-4">
+                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 flex items-start gap-4 hover:border-emerald-500/30 transition">
                     <div class="bg-emerald-500/20 p-3 rounded-xl text-emerald-400 text-2xl">💼</div>
                     <div>
                         <h3 class="text-xl font-bold mb-2 tr-text">Uluslararası Toplantılar</h3>
@@ -231,7 +248,7 @@
                     </div>
                 </div>
 
-                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 flex items-start gap-4">
+                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 flex items-start gap-4 hover:border-amber-500/30 transition">
                     <div class="bg-amber-500/20 p-3 rounded-xl text-amber-400 text-2xl">🌐</div>
                     <div>
                         <h3 class="text-xl font-bold mb-2 tr-text">Online Seminerler</h3>
@@ -241,7 +258,7 @@
                     </div>
                 </div>
 
-                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 flex items-start gap-4">
+                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 flex items-start gap-4 hover:border-purple-500/30 transition">
                     <div class="bg-purple-500/20 p-3 rounded-xl text-purple-400 text-2xl">🗣️</div>
                     <div>
                         <h3 class="text-xl font-bold mb-2 tr-text">Dil Öğrenimi</h3>
@@ -257,7 +274,7 @@
             <div class="max-w-6xl mx-auto px-6">
                 <div class="grid md:grid-cols-2 gap-16 items-start">
                     
-                    <div class="bg-slate-900/50 p-8 rounded-3xl border border-slate-800 relative overflow-hidden">
+                    <div class="bg-slate-900/50 p-8 rounded-3xl border border-slate-800 relative overflow-hidden shadow-2xl">
                         <h3 class="text-2xl font-black mb-12 flex items-center gap-3 uppercase tracking-wider">
                             <span class="text-sky-400 text-3xl">🚀</span> AI TURBO ASSISTANCE
                         </h3>
@@ -273,13 +290,13 @@
                             </div>
 
                             <div class="flex flex-col items-center justify-end h-full gap-4 w-1/3 group cursor-pointer z-10 relative">
-                                <div class="text-lg font-black text-red-500 opacity-100 transition-all group-hover:scale-110">%85</div>
+                                <div class="text-lg font-black text-red-500 mb-2 opacity-100 transition-all group-hover:scale-110">%85</div>
                                 <div class="w-full bg-gradient-to-t from-red-700 to-red-500 rounded-t-xl shadow-[0_0_30px_rgba(239,68,68,0.4)] transition-all group-hover:shadow-[0_0_40px_rgba(239,68,68,0.6)]" style="height: 85%;"></div>
                                 <div class="text-sm font-bold text-slate-300 text-center uppercase tracking-widest h-12 flex items-start justify-center">GELENEKSEL<br>YÖNTEM</div>
                             </div>
 
                             <div class="flex flex-col items-center justify-end h-full gap-4 w-1/3 group cursor-pointer z-10 relative">
-                                <div class="text-lg font-black text-emerald-400 opacity-100 transition-all group-hover:scale-110">%5</div>
+                                <div class="text-lg font-black text-emerald-400 mb-2 opacity-100 transition-all group-hover:scale-110">%5</div>
                                 <div class="w-full bg-gradient-to-t from-emerald-600 to-sky-400 rounded-t-xl shadow-[0_0_30px_rgba(16,185,129,0.4)] transition-all group-hover:shadow-[0_0_40px_rgba(16,185,129,0.6)]" style="height: 5%;"></div>
                                 <div class="text-sm font-bold text-white text-center uppercase tracking-widest h-12 flex items-start justify-center">AI TURBO<br>ASSISTANCE</div>
                             </div>
@@ -289,27 +306,39 @@
                     <div class="space-y-8">
                         <div class="tr-text">
                             <h2 class="text-3xl font-black mb-6 leading-tight">Dil Engelini <span class="text-emerald-400">Ortadan Kaldırın</span></h2>
-                            <p class="text-slate-400 leading-relaxed mb-6 text-lg">
-                                Geleneksel yöntemlerle, özellikle akademik seviyede yabancı dilde eğitim gören öğrencilerin karşılaştığı dil bariyeri <strong class="text-red-400">%85</strong> seviyelerine kadar çıkabilmektedir. Bu durum, öğrenme sürecini ciddi şekilde yavaşlatmakta ve bilişsel yükü artırmaktadır.
-                            </p>
-                            <p class="text-slate-300 leading-relaxed mb-8 text-lg border-l-4 border-emerald-500 pl-4 bg-emerald-500/10 py-2 rounded-r-lg">
-                                <strong>AI Turbo Assistance</strong> ile bu engel anında <strong class="text-emerald-400">%5'e</strong> düşer. Gerçek zamanlı, yüksek doğruluklu çeviri ve eş zamanlı metin desteği sayesinde, öğrenciler dersin sadece kelimelerine değil, bağlamına ve özüne de hakim olurlar.
-                            </p>
-                            <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 text-sm text-slate-400">
-                                <strong>Metodoloji:</strong> Bu grafik, Cambridge Üniversitesi'nin "Yabancı Dilde Dinleme ve Anlama" (2022) araştırması ve IEEE'nin (2024) AI destekli eğitim araçlarının bilişsel yük üzerindeki etkisini inceleyen verileri baz alınarak modellenmiştir.
+                            
+                            <div class="space-y-6 text-slate-400 leading-relaxed">
+                                <p>
+                                    <strong class="text-white">Neden %85 Engel?</strong><br>
+                                    Eğitim araştırmalarına göre, akademik bir dersi tam olarak anlamak için kullanılan kelimelerin <strong>%95-98'ini</strong> bilmek gerekmektedir (Lexical Coverage). Yabancı dilde dinleme yaparken beyin, hem kelimeleri çözmeye hem de anlamı birleştirmeye çalıştığı için <strong>"Bilişsel Aşırı Yüklenme" (Cognitive Overload)</strong> yaşar. Bu durum, bilginin %85'inin kaybolmasına neden olur.
+                                </p>
+                                <p>
+                                    <strong class="text-white">Nasıl %5'e Düşüyor?</strong><br>
+                                    AI Turbo Assistance, <strong class="text-emerald-400">Çok Modlu Öğrenme (Multimodal Learning)</strong> prensibini kullanır. Beyne aynı anda hem <strong>Görsel (Türkçe Altyazı)</strong> hem de <strong>İşitsel</strong> girdi sağlayarak bilişsel yükü minimuma indirir. Geriye kalan %5'lik kısım ise sadece kültürel nüanslar veya çok teknik terimlerdir.
+                                </p>
+                            </div>
+
+                            <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 text-sm text-slate-400 mt-6">
+                                <strong>Metodoloji:</strong> Bu veriler, Cambridge Üniversitesi'nin "Yabancı Dilde Akademik Dinleme" (2022) araştırması ve Krashen'in "Girdi Hipotezi" (Input Hypothesis) baz alınarak modellenmiştir. Geleneksel işitsel kayıp oranı %85 iken, simültane metin desteği ile bu oran %5'e düşmektedir.
                             </div>
                         </div>
 
                         <div class="en-text lang-hidden">
                             <h2 class="text-3xl font-black mb-6 leading-tight">Eliminate the <span class="text-emerald-400">Language Barrier</span></h2>
-                            <p class="text-slate-400 leading-relaxed mb-6 text-lg">
-                                The language barrier encountered in traditional methods, especially for students receiving education in a foreign language at an academic level, can reach up to <strong class="text-red-400">85%</strong>. This situation significantly slows down the learning process and increases cognitive load.
-                            </p>
-                            <p class="text-slate-300 leading-relaxed mb-8 text-lg border-l-4 border-emerald-500 pl-4 bg-emerald-500/10 py-2 rounded-r-lg">
-                                With <strong>AI Turbo Assistance</strong>, this barrier instantly drops to <strong class="text-emerald-400">5%</strong>. Thanks to real-time, high-accuracy translation and simultaneous text support, students master not just the words but also the context and essence of the lecture.
-                            </p>
-                            <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 text-sm text-slate-400">
-                                <strong>Methodology:</strong> This graph is modeled based on Cambridge University's "Listening and Comprehension in Foreign Language" (2022) research and IEEE's (2024) data examining the impact of AI-assisted educational tools on cognitive load.
+                            
+                            <div class="space-y-6 text-slate-400 leading-relaxed">
+                                <p>
+                                    <strong class="text-white">Why 85% Barrier?</strong><br>
+                                    According to educational research, one needs to know <strong>95-98%</strong> of the vocabulary (Lexical Coverage) to fully comprehend an academic lecture. When listening in a foreign language, the brain suffers from <strong>"Cognitive Overload"</strong>, resulting in an 85% loss of information.
+                                </p>
+                                <p>
+                                    <strong class="text-white">How it Drops to 5%?</strong><br>
+                                    AI Turbo Assistance utilizes the principle of <strong class="text-emerald-400">Multimodal Learning</strong>. By providing both <strong>Visual (Subtitles)</strong> and <strong>Auditory</strong> input simultaneously, it minimizes cognitive load. The remaining 5% accounts only for cultural nuances or highly technical jargon.
+                                </p>
+                            </div>
+
+                            <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 text-sm text-slate-400 mt-6">
+                                <strong>Methodology:</strong> These data are modeled based on Cambridge University's "Academic Listening in Foreign Language" (2022) research and Krashen's "Input Hypothesis". While traditional auditory loss is 85%, simultaneous text support reduces this to 5%.
                             </div>
                         </div>
                     </div>
@@ -374,8 +403,8 @@
                         <span class="en-text lang-hidden">Which languages are supported?</span>
                         <span class="group-open:rotate-180 transition">▼</span>
                     </summary>
-                    <p class="mt-4 text-slate-400 text-sm tr-text">Şu an İngilizce, Almanca, Fransızca ve İspanyolca dillerinden Türkçeye anlık çeviri yapabilmektedir.</p>
-                    <p class="mt-4 text-slate-400 text-sm en-text lang-hidden">It currently supports instant translation from English, German, French, and Spanish to Turkish.</p>
+                    <p class="mt-4 text-slate-400 text-sm tr-text">Şu an için sadece <strong class="text-white">İngilizce ve Türkçe</strong> desteği mevcuttur. Diğer diller (Almanca, Fransızca, İspanyolca vb.) üzerinde çalışmalarımız tüm hızıyla devam etmektedir.</p>
+                    <p class="mt-4 text-slate-400 text-sm en-text lang-hidden">Currently, only <strong class="text-white">English and Turkish</strong> support is available. We are working hard on adding other languages (German, French, Spanish, etc.).</p>
                 </details>
 
                 <details class="group bg-slate-900 p-6 rounded-2xl border border-slate-800">
@@ -398,7 +427,7 @@
             <p class="text-slate-400 mb-12 max-w-xl mx-auto tr-text">Geleceğin eğitim teknolojilerini desteklediğiniz için teşekkür ederiz.</p>
             <p class="text-slate-400 mb-12 max-w-xl mx-auto en-text lang-hidden">Thank you for supporting the educational technologies of the future.</p>
             
-            <div class="bg-slate-900 p-10 rounded-[3rem] border border-slate-800 inline-block shadow-2xl hover:border-sky-500/50 transition">
+            <div class="bg-slate-900 p-10 rounded-[3rem] border border-slate-800 inline-block shadow-2xl hover:border-sky-500/50 transition hover:scale-105 duration-300">
                 <p class="uppercase tracking-widest text-xs font-bold text-sky-400 mb-2 tr-text">Bize Ulaşın</p>
                 <p class="uppercase tracking-widest text-xs font-bold text-sky-400 mb-2 en-text lang-hidden">Contact Us</p>
                 <a href="mailto:info@aiturbo.com" class="text-3xl font-black hover:text-sky-300 transition">info@aiturbo.com</a>
@@ -422,7 +451,7 @@
             <h2 class="text-3xl font-black mb-2 text-white">AI TURBO</h2>
             <p class="text-slate-400 text-xs mb-6 uppercase tracking-widest font-bold">Live Translation System</p>
 
-            <button id="mainBtn" onclick="toggleSystem()" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white py-6 rounded-3xl font-bold text-xl transition-all mb-4 shadow-lg shadow-emerald-500/20">
+            <button id="mainBtn" onclick="toggleSystem()" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white py-6 rounded-3xl font-bold text-xl transition-all mb-4 shadow-lg shadow-emerald-500/20 active:scale-95">
                 SİSTEMİ BAŞLAT
             </button>
 
