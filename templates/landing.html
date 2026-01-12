@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Turbo Assistance Pro</title>
     
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='favGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2338bdf8'/%3E%3Cstop offset='100%25' style='stop-color:%23818cf8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M25 20 V 60 C 25 85, 75 85, 75 60 V 20' stroke='url(%23favGrad)' stroke-width='14' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .lang-hidden { display: none; }
@@ -58,28 +56,10 @@
         <nav class="fixed top-0 left-0 w-full z-[100] glass px-6 py-4 transition-all shadow-2xl shadow-sky-900/10">
             <div class="max-w-7xl mx-auto flex justify-between items-center relative">
                 <div class="flex items-center gap-8">
-                    <div class="flex items-center gap-3 cursor-pointer group" onclick="window.scrollTo(0,0)">
-                        <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="group-hover:scale-110 transition-transform duration-300">
-                            <defs>
-                                <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#818cf8;stop-opacity:1" />
-                                </linearGradient>
-                                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-                                    <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-                                    <feMerge>
-                                        <feMergeNode in="coloredBlur"/>
-                                        <feMergeNode in="SourceGraphic"/>
-                                    </feMerge>
-                                </filter>
-                            </defs>
-                            <path d="M25 20 V 60 C 25 85, 75 85, 75 60 V 20" stroke="url(#logoGradient)" stroke-width="12" stroke-linecap="round" fill="none" filter="url(#glow)"/>
-                        </svg>
-                        
-                        <div class="text-xl md:text-2xl font-black text-sky-400 tracking-tighter uppercase hover:text-sky-300 transition">
-                            AI TURBO
-                        </div>
+                    <div class="text-2xl font-black text-sky-400 tracking-tighter uppercase cursor-pointer hover:text-sky-300 transition" onclick="window.scrollTo(0,0)">
+                        AI TURBO ASSISTANCE
                     </div>
+                    
                     <div class="hidden md:flex gap-6 text-sm font-medium text-slate-400 items-center">
                         
                         <div class="group py-4 relative">
@@ -162,14 +142,14 @@
                             </div>
                         </div>
 
+                        <a href="#why-us" class="hover:text-white transition tr-text">Neden Biz?</a>
+                        <a href="#why-us" class="hover:text-white transition en-text lang-hidden">Why Us?</a>
+
                         <a href="#solutions" class="hover:text-white transition tr-text">Kullanım Alanları</a>
                         <a href="#solutions" class="hover:text-white transition en-text lang-hidden">Use Cases</a>
 
                         <a href="#how-it-works" class="hover:text-white transition tr-text">Nasıl Çalışır?</a>
                         <a href="#how-it-works" class="hover:text-white transition en-text lang-hidden">How it Works</a>
-
-                        <a href="#impact" class="hover:text-white transition tr-text">Etki Analizi</a>
-                        <a href="#impact" class="hover:text-white transition en-text lang-hidden">Impact Analysis</a>
 
                         <a href="#faq" class="hover:text-white transition tr-text">S.S.S.</a>
                         <a href="#faq" class="hover:text-white transition en-text lang-hidden">FAQ</a>
@@ -298,6 +278,44 @@
                         <h3 class="text-xl font-bold mb-3 en-text lang-hidden">Smart Archive</h3>
                         <p class="text-slate-400 leading-relaxed tr-text">Ders notlarını saniyeler içinde düzenlenmiş formatta telefonunuza indirir.</p>
                         <p class="text-slate-400 leading-relaxed en-text lang-hidden">Downloads lecture notes to your phone in an organized format in seconds.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-us" class="py-24 bg-slate-900/30 relative border-t border-slate-800/50">
+             <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <h2 class="text-4xl font-black mb-16 text-center tr-text">Neden AI Turbo Assistance?</h2>
+                <h2 class="text-4xl font-black mb-16 text-center en-text lang-hidden">Why AI Turbo Assistance?</h2>
+                
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="bg-slate-800/50 p-8 rounded-3xl border border-slate-700/50 hover:border-sky-500/30 transition group text-center">
+                        <div class="bg-sky-500/20 p-4 rounded-2xl text-sky-400 text-3xl mb-6 inline-block group-hover:scale-110 transition">🚀</div>
+                        <h3 class="text-xl font-bold mb-4 tr-text">Bilgi Kaçırmaya Son</h3>
+                        <h3 class="text-xl font-bold mb-4 en-text lang-hidden">No More Missed Info</h3>
+                        <p class="text-slate-400 text-sm tr-text">Dersi dinlerken not alma stresi yaşamayın. Her kelimeyi yakalıyoruz.</p>
+                        <p class="text-slate-400 text-sm en-text lang-hidden">Don't stress about note-taking while listening. We capture every word.</p>
+                    </div>
+                     <div class="bg-slate-800/50 p-8 rounded-3xl border border-slate-700/50 hover:border-emerald-500/30 transition group text-center">
+                        <div class="bg-emerald-500/20 p-4 rounded-2xl text-emerald-400 text-3xl mb-6 inline-block group-hover:scale-110 transition">📚</div>
+                        <h3 class="text-xl font-bold mb-4 tr-text">Düzenli Ders Notları</h3>
+                        <h3 class="text-xl font-bold mb-4 en-text lang-hidden">Organized Notes</h3>
+                        <p class="text-slate-400 text-sm tr-text">Karmaşık el yazılarına son. Temiz, dijital ve düzenlenmiş notlar anında hazır.</p>
+                        <p class="text-slate-400 text-sm en-text lang-hidden">No more messy handwriting. Clean, digital, and organized notes instantly.</p>
+                    </div>
+                     <div class="bg-slate-800/50 p-8 rounded-3xl border border-slate-700/50 hover:border-amber-500/30 transition group text-center">
+                        <div class="bg-amber-500/20 p-4 rounded-2xl text-amber-400 text-3xl mb-6 inline-block group-hover:scale-110 transition">🧠</div>
+                        <h3 class="text-xl font-bold mb-4 tr-text">İkili Öğrenme Yöntemi</h3>
+                        <h3 class="text-xl font-bold mb-4 en-text lang-hidden">Dual Learning Method</h3>
+                        <p class="text-slate-400 text-sm tr-text">Hem dinleyerek hem okuyarak (altyazı) öğrenmeyi pekiştirin, anlama oranını artırın.</p>
+                        <p class="text-slate-400 text-sm en-text lang-hidden">Reinforce learning by both listening and reading (subtitles), increasing comprehension.</p>
+                    </div>
+                     <div class="bg-slate-800/50 p-8 rounded-3xl border border-slate-700/50 hover:border-purple-500/30 transition group text-center">
+                        <div class="bg-purple-500/20 p-4 rounded-2xl text-purple-400 text-3xl mb-6 inline-block group-hover:scale-110 transition">💸</div>
+                        <h3 class="text-xl font-bold mb-4 tr-text">Tamamen Ücretsiz</h3>
+                        <h3 class="text-xl font-bold mb-4 en-text lang-hidden">Completely Free</h3>
+                        <p class="text-slate-400 text-sm tr-text">Öğrenciler için geliştirildi. Hiçbir gizli ücret veya abonelik yok.</p>
+                        <p class="text-slate-400 text-sm en-text lang-hidden">Developed for students. No hidden fees or subscriptions.</p>
                     </div>
                 </div>
             </div>
@@ -488,24 +506,32 @@
             <div class="max-w-7xl mx-auto px-6 relative z-10">
                 <div class="grid md:grid-cols-4 gap-8 text-center divided-y md:divide-y-0 md:divide-x divide-slate-800">
                     <div class="p-4">
-                        <div class="text-4xl md:text-5xl font-black text-sky-400 mb-2">15K+</div>
-                        <div class="text-sm uppercase tracking-widest font-bold text-slate-500 tr-text">Aktif Kullanıcı</div>
-                        <div class="text-sm uppercase tracking-widest font-bold text-slate-500 en-text lang-hidden">Active Users</div>
+                        <div class="text-4xl md:text-5xl font-black text-sky-400 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-2"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5c0-2.76-2.24-5-5-5zm0 14a3 3 0 1 1 3-3 3 3 0 0 1-3 3z"/></svg>
+                        </div>
+                        <div class="text-sm uppercase tracking-widest font-bold text-slate-500 tr-text">Son Teknoloji YZ</div>
+                        <div class="text-sm uppercase tracking-widest font-bold text-slate-500 en-text lang-hidden">State-of-the-Art AI</div>
                     </div>
                     <div class="p-4">
-                        <div class="text-4xl md:text-5xl font-black text-emerald-400 mb-2">%98</div>
-                        <div class="text-sm uppercase tracking-widest font-bold text-slate-500 tr-text">Çeviri Doğruluğu</div>
-                        <div class="text-sm uppercase tracking-widest font-bold text-slate-500 en-text lang-hidden">Translation Accuracy</div>
+                        <div class="text-4xl md:text-5xl font-black text-emerald-400 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        </div>
+                        <div class="text-sm uppercase tracking-widest font-bold text-slate-500 tr-text">Yüksek Doğruluk Hedefi</div>
+                        <div class="text-sm uppercase tracking-widest font-bold text-slate-500 en-text lang-hidden">High Accuracy Goal</div>
                     </div>
                      <div class="p-4">
-                        <div class="text-4xl md:text-5xl font-black text-amber-400 mb-2">40+</div>
-                        <div class="text-sm uppercase tracking-widest font-bold text-slate-500 tr-text">Ülke & Üniversite</div>
-                        <div class="text-sm uppercase tracking-widest font-bold text-slate-500 en-text lang-hidden">Countries Served</div>
+                        <div class="text-4xl md:text-5xl font-black text-amber-400 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <div class="text-sm uppercase tracking-widest font-bold text-slate-500 tr-text">Tarayıcı Tabanlı Erişim</div>
+                        <div class="text-sm uppercase tracking-widest font-bold text-slate-500 en-text lang-hidden">Browser-Based Access</div>
                     </div>
                     <div class="p-4">
-                        <div class="text-4xl md:text-5xl font-black text-purple-400 mb-2">24/7</div>
-                        <div class="text-sm uppercase tracking-widest font-bold text-slate-500 tr-text">Kesintisiz Erişim</div>
-                        <div class="text-sm uppercase tracking-widest font-bold text-slate-500 en-text lang-hidden">Uptime Guarantee</div>
+                        <div class="text-4xl md:text-5xl font-black text-purple-400 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div class="text-sm uppercase tracking-widest font-bold text-slate-500 tr-text">7/24 Kesintisiz</div>
+                        <div class="text-sm uppercase tracking-widest font-bold text-slate-500 en-text lang-hidden">24/7 Availability</div>
                     </div>
                 </div>
             </div>
