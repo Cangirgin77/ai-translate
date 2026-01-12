@@ -7,7 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .lang-hidden { display: none; }
-        .glass { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        /* Glass Effect güncellendi: Daha belirgin buzlu cam */
+        .glass { background: rgba(11, 15, 26, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); }
         .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-size: 200% 200%; animation: gradientMove 5s ease infinite; }
         html { scroll-behavior: smooth; }
         
@@ -51,10 +52,10 @@
 
     <div id="landing-page" class="fade-in relative overflow-x-hidden">
         
-        <nav class="sticky top-0 z-[100] glass px-6 py-4 transition-all">
+        <nav class="fixed top-0 left-0 w-full z-[100] glass px-6 py-4 transition-all shadow-2xl shadow-sky-900/10">
             <div class="max-w-7xl mx-auto flex justify-between items-center relative">
                 <div class="flex items-center gap-8">
-                    <div class="text-2xl font-black text-sky-400 tracking-tighter uppercase cursor-pointer hover:text-sky-300 transition" onclick="showLanding()">AI TURBO ASSISTANCE</div>
+                    <div class="text-2xl font-black text-sky-400 tracking-tighter uppercase cursor-pointer hover:text-sky-300 transition" onclick="window.scrollTo(0,0)">AI TURBO ASSISTANCE</div>
                     
                     <div class="hidden md:flex gap-6 text-sm font-medium text-slate-400 items-center">
                         
@@ -160,7 +161,7 @@
             </div>
         </nav>
 
-        <section class="relative py-32 px-6 text-center overflow-hidden min-h-[90vh] flex flex-col justify-center items-center">
+        <section class="relative pt-44 pb-32 px-6 text-center overflow-hidden min-h-[90vh] flex flex-col justify-center items-center">
              
             <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
             <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[120px] -z-10 animate-pulse"></div>
